@@ -14,7 +14,9 @@
     - [MySQL をサクッと動かす](#mysql-をサクッと動かす)
     - [PostgreSQL をサクッと動かす](#postgresql-をサクッと動かす)
 - [`say`: テキスト読み上げ](#say-テキスト読み上げ)
-- [`wc`: クリップボードにコピーした文字列の長さを知りたい](#wc-クリップボードにコピーした文字列の長さを知りたい)
+- [`wc`](#wc)
+    - [`echo -e '1\n2\n3' | wc -l`: 行数をカウントしたい](#echo--e-1\n2\n3--wc--l-行数をカウントしたい)
+    - [`pbpaste | wc -w`: クリップボードにコピーした文字列の長さを知りたい](#pbpaste--wc--w-クリップボードにコピーした文字列の長さを知りたい)
 - [`cut`: 受け取った文字列を分割して扱いたい](#cut-受け取った文字列を分割して扱いたい)
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
@@ -225,7 +227,16 @@ say hello
 say Man Page - macOS - SS64.com
 https://ss64.com/osx/say.html
 
-# `wc`: クリップボードにコピーした文字列の長さを知りたい
+# `wc`
+
+## `echo -e '1\n2\n3' | wc -l`: 行数をカウントしたい
+
+```bash
+echo -e '1\n2\n3' | wc -l
+       3
+```
+
+## `pbpaste | wc -w`: クリップボードにコピーした文字列の長さを知りたい
 
 ```bash
 pbpaste | wc -w
@@ -238,8 +249,8 @@ https://www.freebsd.org/cgi/man.cgi?wc
 
 > -m	The number of characters in each input file is written to the standard output. If the current locale does not support multi-byte characters, this is equivalent to the	-c option.  This will cancel out any prior usage of the -c option.
 
-パッと見、 `-c` でも良さそうな感じがしますが、 `-c` オプションは文字列の長さではなくてバイト数です。
-`-m` でも current locale がマルチバイト文字をサポートしてない場合は `-c` と同等になるとありますが、気にする機会はあまり無さそう。
+パッと見、 `-c` でも良さそうな感じがしますが、 `-c` オプションは文字列の長さではなくてバイト数
+`-m` でも current locale がマルチバイト文字をサポートしてない場合は `-c` と同等になるとありますが、気にする機会はあまり無さそう
 
 ```bash
 # 'あああ' をクリップボードにコピーすると・・・
