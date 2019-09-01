@@ -746,7 +746,7 @@ $ curl http://checkip.amazonaws.com/
 ## `for`
 
 ```bash
-$ for i in {1..5}; do date; done
+$ for i in {1..5}; do echo $i; done
 $ for ( ; ; ); do date; done
 ```
 
