@@ -2,6 +2,10 @@
 
 <!-- TOC -->
 
+- [Visual Studio Code](#visual-studio-code)
+    - [Markdown TOC](#markdown-toc)
+    - [`Command + Shift + O`: Markdown の見出しをベースに移動できる](#command--shift--o-markdown-の見出しをベースに移動できる)
+    - [ショートカット一覧](#ショートカット一覧)
 - [`docker`](#docker)
     - [`jshell` をサクッと使いたい](#jshell-をサクッと使いたい)
     - [docker official images](#docker-official-images)
@@ -73,6 +77,30 @@
     - [CIDR 範囲調べたい](#cidr-範囲調べたい)
 
 <!-- /TOC -->
+
+# Visual Studio Code
+
+Documentation for Visual Studio Code
+https://code.visualstudio.com/docs
+
+## Markdown TOC
+
+Auto Markdown TOC が日本語見出しにも対応してて良い感じ
+
+Auto Markdown TOC - Visual Studio Marketplace
+https://marketplace.visualstudio.com/items?itemName=huntertran.auto-markdown-toc
+
+## `Command + Shift + O`: Markdown の見出しをベースに移動できる
+
+便利
+
+## ショートカット一覧
+
+Visual Studio Code Key Bindings
+https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference
+
+keyboard-shortcuts-macos.pdf
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 
 # `docker`
 
