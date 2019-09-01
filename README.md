@@ -13,6 +13,9 @@
     - [nginx をサクッと動かす](#nginx-をサクッと動かす)
     - [MySQL をサクッと動かす](#mysql-をサクッと動かす)
     - [PostgreSQL をサクッと動かす](#postgresql-をサクッと動かす)
+- [`echo`](#echo)
+    - [`echo -n 'hoge'`: 改行を出力しない](#echo--n-hoge-改行を出力しない)
+    - [`echo -e 'hoge\nfuga'`: 改行を出力する](#echo--e-hoge\nfuga-改行を出力する)
 - [`say`: テキスト読み上げ](#say-テキスト読み上げ)
 - [`wc`](#wc)
     - [`echo -e '1\n2\n3' | wc -l`: 行数をカウントしたい](#echo--e-1\n2\n3--wc--l-行数をカウントしたい)
@@ -215,6 +218,23 @@ docker rm some-postgres
 
 postgres - Docker Hub
 https://hub.docker.com/_/postgres
+
+# `echo`
+
+GNU Coreutils: 15.1 echo: テキストを 1 行表示する  
+https://linuxjm.osdn.jp/info/GNU_coreutils/coreutils-ja_105.html#echo-invocation
+
+## `echo -n 'hoge'`: 改行を出力しない
+
+```bash
+echo -n 'hoge'
+```
+
+## `echo -e 'hoge\nfuga'`: 改行を出力する
+
+```bash
+echo -e 'hoge\nfuga'
+```
 
 # `say`: テキスト読み上げ
 
