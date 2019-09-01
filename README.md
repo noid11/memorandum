@@ -62,14 +62,15 @@
 - [XML を jq 的に整形したい](#xml-を-jq-的に整形したい)
     - [参考](#参考)
 - [環境変数一覧を表示したい](#環境変数一覧を表示したい)
-- [GiB, MiB 等の単位変換](#gib-mib-等の単位変換)
-- [CIDR](#cidr)
-- [自分のグローバル IP を知りたい](#自分のグローバル-ip-を知りたい)
-    - [ipinfo.io](#ipinfoio)
-    - [checkip](#checkip)
 - [one liner](#one-liner)
     - [`while`](#while)
     - [`for`](#for)
+- [便利な Web サイト](#便利な-web-サイト)
+    - [自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい](#自分のグローバル-ip-を知りたい特定の-ip-アドレスの位置情報とか調べたい)
+        - [ipinfo.io](#ipinfoio)
+        - [checkip](#checkip)
+    - [GiB, MiB 等の単位変換](#gib-mib-等の単位変換)
+    - [CIDR 範囲調べたい](#cidr-範囲調べたい)
 
 <!-- /TOC -->
 
@@ -684,19 +685,26 @@ $ printenv
 Man page of printenv
 https://linuxjm.osdn.jp/html/gnumaniak/man1/printenv.1.html
 
-# GiB, MiB 等の単位変換
+# one liner
 
-Data Storage Conversion Calculator
-http://extraconversion.com/data-storage
+## `while`
 
-# CIDR
+```bash
+ while sleep 1; do date; done
+```
 
-Online IP CIDR / VLSM Supernet Calculator
-http://www.subnet-calculator.com/cidr.php
+## `for`
 
-# 自分のグローバル IP を知りたい
+```bash
+$ for i in {1..5}; do echo $i; done
+$ for ( ; ; ); do date; done
+```
 
-## ipinfo.io
+# 便利な Web サイト
+
+## 自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい
+
+### ipinfo.io
 
 IP Address API and Data Solutions - geolocation, company, carrier info, type and more - IPinfo IP Address Geolocation API
 https://ipinfo.io/
@@ -724,7 +732,7 @@ $ curl -s ipinfo.io/8.8.8.8 | jq
 }
 ```
 
-## checkip
+### checkip
 
 http://checkip.amazonaws.com/
 
@@ -735,18 +743,12 @@ $ curl http://checkip.amazonaws.com/
 72.21.198.67
 ```
 
-# one liner
+## GiB, MiB 等の単位変換
 
-## `while`
+Data Storage Conversion Calculator
+http://extraconversion.com/data-storage
 
-```bash
- while sleep 1; do date; done
-```
+## CIDR 範囲調べたい
 
-## `for`
-
-```bash
-$ for i in {1..5}; do echo $i; done
-$ for ( ; ; ); do date; done
-```
-
+Online IP CIDR / VLSM Supernet Calculator
+http://www.subnet-calculator.com/cidr.php
