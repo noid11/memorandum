@@ -24,6 +24,7 @@
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
 - [Git](#git)
+    - [ローカルでトピックブランチ作ってマージして消す](#ローカルでトピックブランチ作ってマージして消す)
     - [直前の commit 取り消し](#直前の-commit-取り消し)
     - [ファイルやディレクトリのリネーム](#ファイルやディレクトリのリネーム)
     - [プライベートな GitHub アカウントで使ってる Git ユーザーを設定する](#プライベートな-github-アカウントで使ってる-git-ユーザーを設定する)
@@ -318,6 +319,28 @@ yes > /dev/null &
 ```
 
 # Git
+
+Git - Reference  
+https://git-scm.com/docs
+
+## ローカルでトピックブランチ作ってマージして消す
+
+```bash
+# -b で新規ブランチ作成してブランチ切り替え
+git checkout -b topic-name
+
+# 適当に commit 
+git add hoge
+git commit -m hoge
+
+# 元のブランチに戻してマージしてプッシュ
+git checkout master
+git merge topic-name
+git push origin master
+
+# トピックブランチ削除
+git branch -d topic-name
+```
 
 ## 直前の commit 取り消し
 
