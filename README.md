@@ -98,6 +98,8 @@
     - [Markdown](#markdown)
         - [GFM: GitHub Flavored Markdown](#gfm-github-flavored-markdown)
         - [Qiita Markdown Cheat Sheet](#qiita-markdown-cheat-sheet)
+    - [GNU](#gnu)
+        - [Coreutils](#coreutils)
 
 <!-- /TOC -->
 
@@ -937,3 +939,16 @@ https://guides.github.com/features/mastering-markdown/
 
 Markdown記法 チートシート - Qiita
 https://qiita.com/Qiita/items/c686397e4a0f4f11683d
+
+## GNU
+
+GNUマニュアル・オンライン - GNUプロジェクト - フリーソフトウェアファウンデーション  
+https://www.gnu.org/manual/manual.html
+
+### Coreutils
+
+GNU Coreutils: GNU Coreutils  
+https://linuxjm.osdn.jp/info/GNU_coreutils/coreutils-ja.html
+
+GNU Coreutils: Top  
+https://www.gnu.org/software/coreutils/manual/html_node/index.html
