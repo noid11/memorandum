@@ -1,11 +1,9 @@
-# memorandum
-
 何度も調べたくない事の備忘録。
 
 <!-- TOC -->
 
-- [memorandum](#memorandum)
 - [`docker`](#docker)
+    - [`jshell` をサクッと使いたい](#jshell-をサクッと使いたい)
     - [docker official images](#docker-official-images)
     - [Apache(httpd) をサクッと動かす](#apachehttpd-をサクッと動かす)
     - [nginx をサクッと動かす](#nginx-をサクッと動かす)
@@ -14,8 +12,6 @@
 - [`say`: テキスト読み上げ](#say-テキスト読み上げ)
 - [`wc`: クリップボードにコピーした文字列の長さを知りたい](#wc-クリップボードにコピーした文字列の長さを知りたい)
 - [`cut`: 受け取った文字列を分割して扱いたい](#cut-受け取った文字列を分割して扱いたい)
-- [docker 系](#docker-系)
-    - [`jshell` をサクッと使いたい](#jshell-をサクッと使いたい)
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
 - [Git](#git)
@@ -81,6 +77,18 @@
 
 docker | Docker Documentation
 https://docs.docker.com/engine/reference/commandline/docker/
+
+## `jshell` をサクッと使いたい
+
+```bash
+docker run -it openjdk jshell
+```
+
+openjdk - Docker Hub
+https://hub.docker.com/_/openjdk
+
+jshell
+https://docs.oracle.com/javase/9/tools/jshell.htm
 
 ## docker official images
 
@@ -220,20 +228,6 @@ https://www.freebsd.org/cgi/man.cgi?cut
 
 Man page of CUT
 https://linuxjm.osdn.jp/html/GNU_coreutils/man1/cut.1.html
-
-# docker 系
-
-## `jshell` をサクッと使いたい
-
-```bash
-docker run -it openjdk jshell
-```
-
-openjdk - Docker Hub
-https://hub.docker.com/_/openjdk
-
-jshell
-https://docs.oracle.com/javase/9/tools/jshell.htm
 
 # パフォーマンス系
 
