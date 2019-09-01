@@ -75,6 +75,24 @@
         - [checkip](#checkip)
     - [GiB, MiB 等の単位変換](#gib-mib-等の単位変換)
     - [CIDR 範囲調べたい](#cidr-範囲調べたい)
+- [仕様とかリファレンスとか](#仕様とかリファレンスとか)
+    - [AWS Guides and API Reference](#aws-guides-and-api-reference)
+    - [AWS CLI Reference](#aws-cli-reference)
+    - [CloudFormation](#cloudformation)
+        - [AWS Resource and Property Types Reference](#aws-resource-and-property-types-reference)
+    - [SAM: Serverless Application Model](#sam-serverless-application-model)
+        - [AWS Serverless Application Model Template Specification](#aws-serverless-application-model-template-specification)
+        - [SAM CLI Command Reference](#sam-cli-command-reference)
+    - [API Gateway](#api-gateway)
+        - [API Gateway OpenAPI Extensions](#api-gateway-openapi-extensions)
+    - [OpenAPI, Swagger](#openapi-swagger)
+    - [ウェブ関連仕様 日本語訳](#ウェブ関連仕様-日本語訳)
+    - [OpenID Japan 資料](#openid-japan-資料)
+    - [HTML Standard](#html-standard)
+    - [ECMAScript 2019](#ecmascript-2019)
+    - [Markdown](#markdown)
+        - [GFM: GitHub Flavored Markdown](#gfm-github-flavored-markdown)
+        - [Qiita Markdown Cheat Sheet](#qiita-markdown-cheat-sheet)
 
 <!-- /TOC -->
 
@@ -780,3 +798,111 @@ http://extraconversion.com/data-storage
 
 Online IP CIDR / VLSM Supernet Calculator
 http://www.subnet-calculator.com/cidr.php
+
+# 仕様とかリファレンスとか
+
+## AWS Guides and API Reference
+
+AWS Documentation
+https://docs.aws.amazon.com/
+
+サービスのユーザーガイドとか、開発者ガイドとか、API リファレンスとか、チュートリアルとか。
+
+## AWS CLI Reference
+
+AWS CLI Command Reference
+https://docs.aws.amazon.com/cli/latest/index.html
+
+## CloudFormation
+
+### AWS Resource and Property Types Reference
+
+AWS Resource and Property Types Reference - AWS CloudFormation
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html
+
+## SAM: Serverless Application Model
+
+AWS サーバーレスアプリケーションモデル - アマゾン ウェブ サービス
+https://aws.amazon.com/jp/serverless/sam/
+
+awslabs/serverless-application-model: AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications
+https://github.com/awslabs/serverless-application-model
+
+### AWS Serverless Application Model Template Specification
+
+serverless-application-model/2016-10-31.md at master · awslabs/serverless-application-model
+https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md
+
+### SAM CLI Command Reference
+
+AWS SAM CLI Command Reference - AWS Serverless Application Model
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-command-reference.html
+
+## API Gateway
+
+### API Gateway OpenAPI Extensions
+
+OpenAPI に対する API Gateway 拡張 - Amazon API Gateway
+https://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/api-gateway-swagger-extensions.html
+
+## OpenAPI, Swagger
+
+OpenAPI Specification | Swagger
+https://swagger.io/specification/
+
+OAI/OpenAPI-Specification: The OpenAPI Specification Repository
+https://github.com/OAI/OpenAPI-Specification
+
+Home - OpenAPI Initiative
+https://www.openapis.org/
+
+OpenAPI Specification 3.0 チートシート - 朝日ネット　技術者ブログ
+https://techblog.asahi-net.co.jp/entry/2019/03/04/102734
+
+## ウェブ関連仕様 日本語訳
+
+ウェブ関連仕様 日本語訳
+https://triple-underscore.github.io/
+
+HTTP, HTML 等の仕様を日本語訳
+
+## OpenID Japan 資料
+
+公開資料 | OpenID ファウンデーション・ジャパン
+https://www.openid.or.jp/document/index.html
+
+OpenID Connect 1.0, OAuth 2.0 等の日本語訳
+
+## HTML Standard
+
+HTML Standard
+https://html.spec.whatwg.org/multipage/
+
+HTML Standard 日本語訳
+https://momdo.github.io/html/
+
+momdo/momdo.github.io: Japanese translation of the W3C/WHATWG specification(s).
+https://github.com/momdo/momdo.github.io
+
+血統の森 web実験小屋
+http://momdo.s35.xrea.com/web-html-test/index.html
+
+## ECMAScript 2019
+
+ECMAScript® 2019 Language Specification
+https://www.ecma-international.org/ecma-262/10.0/index.html
+
+## Markdown
+
+Daring Fireball: Markdown Syntax Documentation
+https://daringfireball.net/projects/markdown/syntax
+
+### GFM: GitHub Flavored Markdown
+
+Mastering Markdown · GitHub Guides
+https://guides.github.com/features/mastering-markdown/
+
+### Qiita Markdown Cheat Sheet
+
+Markdown記法 チートシート - Qiita
+https://qiita.com/Qiita/items/c686397e4a0f4f11683d
