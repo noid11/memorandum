@@ -101,6 +101,9 @@
         - [Qiita Markdown Cheat Sheet](#qiita-markdown-cheat-sheet)
     - [GNU](#gnu)
         - [Coreutils](#coreutils)
+    - [YAML: Ain't Markup Language](#yaml-aint-markup-language)
+    - [JSON: JavaScript Object Notation](#json-javascript-object-notation)
+        - [JSON Schema](#json-schema)
 
 <!-- /TOC -->
 
@@ -975,3 +978,34 @@ https://linuxjm.osdn.jp/info/GNU_coreutils/coreutils-ja.html
 
 GNU Coreutils: Top  
 https://www.gnu.org/software/coreutils/manual/html_node/index.html
+
+## YAML: Ain't Markup Language
+
+YAML™ Specification Index
+https://yaml.org/spec/
+
+yaml/yaml: YAML language and community information
+https://github.com/yaml/yaml
+
+YAML Ain’t Markup Language (YAML™) Version 1.2
+https://yaml.org/spec/1.2/spec.html
+
+## JSON: JavaScript Object Notation
+
+JSON
+https://www.json.org/
+
+JSON
+https://www.json.org/json-ja.html
+
+> JSON (JavaScript Object Notation)は、軽量のデータ交換フォーマットです。人間にとって読み書きが容易で、マシンにとっても簡単にパースや生成を行なえる形式です。 JavaScriptプログラミング言語 （ECMA-262標準第3版 1999年12月）の一部をベースに作られています。 JSONは完全に言語から独立したテキスト形式ですが、C、C++、C#、Java、JavaScript、Perl、Python、その他多くのCファミリーの言語を使用するプログラマにとっては、馴染み深い規約が使われています。これらの性質が、 JSONを理想的なデータ交換言語にしています。
+
+### JSON Schema
+
+JSON Schema | The home of JSON Schema
+https://json-schema.org/
+
+> JSON Schema is a vocabulary that allows you to annotate and validate JSON documents.
+
+Specification | JSON Schema
+https://json-schema.org/specification.html
