@@ -2,6 +2,10 @@
 
 <!-- TOC -->
 
+- [`npm`: Node Package Manager](#npm-node-package-manager)
+    - [`npm` cli](#npm-cli)
+        - [`npm init`, `npm install package-name`: 初期セットアップ](#npm-init-npm-install-package-name-初期セットアップ)
+    - [`npx`: execute npm package binaries](#npx-execute-npm-package-binaries)
 - [Visual Studio Code](#visual-studio-code)
     - [Markdown TOC](#markdown-toc)
     - [`Command + Shift + O`: Markdown の見出しをベースに移動できる](#command--shift--o-markdown-の見出しをベースに移動できる)
@@ -106,6 +110,35 @@
         - [JSON Schema](#json-schema)
 
 <!-- /TOC -->
+
+# `npm`: Node Package Manager
+
+npm | build amazing things
+https://www.npmjs.com/
+
+## `npm` cli
+
+npm/cli: a package manager for JavaScript, report bugs & get support at:
+https://github.com/npm/cli
+
+CLI documentation | npm Documentation
+https://docs.npmjs.com/cli-documentation/
+
+### `npm init`, `npm install package-name`: 初期セットアップ
+
+```bash
+# package.json 作る
+npm init
+
+# ローカルにパッケージをインストールする package.json への追記は勝手にやってくれる
+npm install aws-sdk
+```
+
+## `npx`: execute npm package binaries
+
+npm/npx: npm package executor
+https://github.com/npm/npx
+
 
 # Visual Studio Code
 
