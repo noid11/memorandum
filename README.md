@@ -7,9 +7,13 @@
         - [`npm init`, `npm install package-name`: 初期セットアップ](#npm-init-npm-install-package-name-初期セットアップ)
     - [`npx`: execute npm package binaries](#npx-execute-npm-package-binaries)
 - [Visual Studio Code](#visual-studio-code)
-    - [Markdown TOC](#markdown-toc)
-    - [`Command + Shift + O`: Markdown の見出しをベースに移動できる](#command--shift--o-markdown-の見出しをベースに移動できる)
-    - [ショートカット一覧](#ショートカット一覧)
+    - [Extensions](#extensions)
+        - [Whitespace+: スペースやタブに色付けしてくれる](#whitespace-スペースやタブに色付けしてくれる)
+        - [zenkaku: 全角スペースをハイライトしてくれる](#zenkaku-全角スペースをハイライトしてくれる)
+        - [Markdown TOC: 日本語使っててもいい感じに TOC を作ってくれる](#markdown-toc-日本語使っててもいい感じに-toc-を作ってくれる)
+    - [ショートカット](#ショートカット)
+        - [一覧](#一覧)
+        - [`Command + Shift + O`: Markdown の見出しをベースに移動できる](#command--shift--o-markdown-の見出しをベースに移動できる)
 - [`docker`](#docker)
     - [`jshell` をサクッと使いたい](#jshell-をサクッと使いたい)
     - [docker official images](#docker-official-images)
@@ -152,24 +156,46 @@ https://github.com/npm/npx
 Documentation for Visual Studio Code
 https://code.visualstudio.com/docs
 
-## Markdown TOC
+Extensions for Visual Studio family of products | Visual Studio Marketplace  
+https://marketplace.visualstudio.com/
+
+## Extensions
+
+Managing Extensions in Visual Studio Code  
+https://code.visualstudio.com/docs/editor/extension-gallery
+
+### Whitespace+: スペースやタブに色付けしてくれる
+
+Whitespace+ - Visual Studio Marketplace  
+https://marketplace.visualstudio.com/items?itemName=davidhouchin.whitespace-plus
+
+スペースを削除してくれるヤツとか色々あるが、Markdown だと改行するのに行末スペース2つ必要で、割とよく使うので色付けしてくれるだけで嬉しい。
+
+### zenkaku: 全角スペースをハイライトしてくれる
+
+zenkaku - Visual Studio Marketplace
+https://marketplace.visualstudio.com/items?itemName=mosapride.zenkaku
+
+### Markdown TOC: 日本語使っててもいい感じに TOC を作ってくれる
 
 Auto Markdown TOC が日本語見出しにも対応してて良い感じ
 
 Auto Markdown TOC - Visual Studio Marketplace
 https://marketplace.visualstudio.com/items?itemName=huntertran.auto-markdown-toc
 
-## `Command + Shift + O`: Markdown の見出しをベースに移動できる
+## ショートカット
 
-便利
-
-## ショートカット一覧
+### 一覧
 
 Visual Studio Code Key Bindings
 https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference
 
 keyboard-shortcuts-macos.pdf
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+
+### `Command + Shift + O`: Markdown の見出しをベースに移動できる
+
+便利
 
 # `docker`
 
