@@ -39,6 +39,7 @@
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
 - [Git](#git)
+    - [`git diff --cached filename`: add したファイルの diff が見たい](#git-diff---cached-filename-add-したファイルの-diff-が見たい)
     - [ローカルでトピックブランチ作ってマージして消す](#ローカルでトピックブランチ作ってマージして消す)
     - [直前の commit 取り消し](#直前の-commit-取り消し)
     - [ファイルやディレクトリのリネーム](#ファイルやディレクトリのリネーム)
@@ -451,6 +452,20 @@ yes > /dev/null &
 
 Git - Reference  
 https://git-scm.com/docs
+
+## `git diff --cached filename`: add したファイルの diff が見たい
+
+```bash
+git add README.md
+git diff --cached README.md
+```
+
+Git - git-diff Documentation  
+https://git-scm.com/docs/git-diff#Documentation/git-diff.txt-emgitdiffemltoptionsgt--cachedltcommitgt--ltpathgt82308203
+
+> git diff [<options>] --cached [<commit>] [--] [<path>…​]
+> 
+>     This form is to view the changes you staged for the next commit relative to the named <commit>. Typically you would want comparison with the latest commit, so if you do not give <commit>, it defaults to HEAD. If HEAD does not exist (e.g. unborn branches) and <commit> is not given, it shows all staged changes. --staged is a synonym of --cached.
 
 ## ローカルでトピックブランチ作ってマージして消す
 
