@@ -29,6 +29,9 @@
     - [`echo -n 'hoge'`: 改行を出力しない](#echo--n-hoge-改行を出力しない)
     - [`echo -e 'hoge\nfuga'`: 改行を出力する](#echo--e-hoge\nfuga-改行を出力する)
 - [`say`: テキスト読み上げ](#say-テキスト読み上げ)
+- [`grep`: ファイルのパターンサーチ](#grep-ファイルのパターンサーチ)
+    - [`grep -c hoge`: マッチした行カウント](#grep--c-hoge-マッチした行カウント)
+    - [`grep -c -v hoge`: マッチしなかった行カウント](#grep--c--v-hoge-マッチしなかった行カウント)
 - [`wc`](#wc)
     - [`echo -e '1\n2\n3' | wc -l`: 行数をカウントしたい](#echo--e-1\n2\n3--wc--l-行数をカウントしたい)
     - [`pbpaste | wc -w`: クリップボードにコピーした文字列の長さを知りたい](#pbpaste--wc--w-クリップボードにコピーした文字列の長さを知りたい)
@@ -345,6 +348,36 @@ say hello
 
 say Man Page - macOS - SS64.com
 https://ss64.com/osx/say.html
+
+# `grep`: ファイルのパターンサーチ
+
+Man page of GREP  
+https://linuxjm.osdn.jp/html/GNU_grep/man1/grep.1.html
+
+grep  
+https://www.freebsd.org/cgi/man.cgi?query=grep
+
+## `grep -c hoge`: マッチした行カウント
+
+`-c`, `--count`
+
+```bash
+echo -e 'a\nb\nc\nd' | grep a -c
+1
+```
+
+カウントの `c`
+
+## `grep -c -v hoge`: マッチしなかった行カウント
+
+`-v`, `--invert-match`
+
+```bash
+echo -e 'a\nb\nc\nd' | grep -v -c a
+3
+```
+
+インバートの `v`
 
 # `wc`
 
