@@ -33,6 +33,10 @@
     - [ファイルやディレクトリのリネーム](#ファイルやディレクトリのリネーム)
     - [プライベートな GitHub アカウントで使ってる Git ユーザーを設定する](#プライベートな-github-アカウントで使ってる-git-ユーザーを設定する)
 - [AWS CLI](#aws-cli)
+    - [ECS/Fargate](#ecsfargate)
+        - [`run-task`: タスク実行](#run-task-タスク実行)
+            - [Fargage](#fargage)
+            - [EC2](#ec2)
     - [Systems Manager](#systems-manager)
         - [`put-parameter`: パラメーターストアに値を登録、更新](#put-parameter-パラメーターストアに値を登録更新)
         - [`get-parameter`: パラメーターストアの値を取得](#get-parameter-パラメーターストアの値を取得)
@@ -411,6 +415,48 @@ git config --local user.email xxxxxxx+itooww@users.noreply.github.com
 
 
 # AWS CLI
+
+## ECS/Fargate
+
+### `run-task`: タスク実行
+
+run-task  
+https://docs.aws.amazon.com/cli/latest/reference/ecs/run-task.html
+
+#### Fargage
+
+```bash
+CLUSTER_NAME=fargate-cluster-name
+TASK_DEFINITION=fargate-definition-name:1
+SUBNET=subnet-xxx
+SECURITY_GROUP=sg-xxx
+
+# とりあえず動かす
+aws ecs run-task --cluster $CLUSTER_NAME --task-definition $TASK_DEFINITION --count 1 --launch-type FARGATE --network-configuration "awsvpcConfiguration={subnets=[$SUBNET],securityGroups=[$SECURITY_GROUP],assignPublicIp=ENABLED}"
+
+
+# コマンド上書き
+CONTAINER_NAME=container-name
+COMMAND="[\"echo\", \"hoge\"]"
+aws ecs run-task --cluster $CLUSTER_NAME --task-definition $TASK_DEFINITION --overrides "{\"containerOverrides\":[{\"name\":\"$CONTAINER_NAME\",\"command\":$COMMAND}]}" --count 1 --launch-type FARGATE --network-configuration "awsvpcConfiguration={subnets=[$SUBNET],securityGroups=[$SECURITY_GROUP],assignPublicIp=ENABLED}"
+```
+
+#### EC2
+
+```bash
+CLUSTER_NAME=ec2-cluster-name
+TASK_DEFINITION=ec2-definition-name:1
+
+
+# とりあえず動かす
+aws ecs run-task --cluster $CLUSTER_NAME --task-definition $TASK_DEFINITION --count 1
+
+# コマンド上書き
+CONTAINER_NAME=container-name
+COMMAND="[\"echo\", \"hoge\"]"
+
+aws ecs run-task --cluster $CLUSTER_NAME --task-definition $TASK_DEFINITION --overrides "{\"containerOverrides\":[{\"name\":\"$CONTAINER_NAME\",\"command\":$COMMAND}]}"' --count 1
+```
 
 ## Systems Manager
 
