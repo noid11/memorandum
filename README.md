@@ -89,6 +89,9 @@
         - [checkip](#checkip)
     - [GiB, MiB 等の単位変換](#gib-mib-等の単位変換)
     - [CIDR 範囲調べたい](#cidr-範囲調べたい)
+    - [OAuth 2.0 を試したい](#oauth-20-を試したい)
+    - [OpenID Connect を試したい](#openid-connect-を試したい)
+    - [SAML デコードしたい](#saml-デコードしたい)
 - [仕様とかリファレンスとか](#仕様とかリファレンスとか)
     - [AWS Guides and API Reference](#aws-guides-and-api-reference)
     - [AWS CLI Reference](#aws-cli-reference)
@@ -936,6 +939,24 @@ http://extraconversion.com/data-storage
 
 Online IP CIDR / VLSM Supernet Calculator
 http://www.subnet-calculator.com/cidr.php
+
+## OAuth 2.0 を試したい
+
+OAuth 2.0 Playground  
+https://www.oauth.com/playground/
+
+OAuth 2.0 Playground  
+https://developers.google.com/oauthplayground/
+
+## OpenID Connect を試したい
+
+OpenID Connect Playground  
+https://openidconnect.net/
+
+## SAML デコードしたい
+
+SAML Token - samltool.io  
+https://samltool.io/
 
 # 仕様とかリファレンスとか
 
