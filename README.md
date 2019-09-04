@@ -13,7 +13,11 @@
         - [Markdown TOC: 日本語使っててもいい感じに TOC を作ってくれる](#markdown-toc-日本語使っててもいい感じに-toc-を作ってくれる)
     - [ショートカット](#ショートカット)
         - [一覧](#一覧)
-        - [`Command + Shift + O`: Markdown の見出しをベースに移動できる](#command--shift--o-markdown-の見出しをベースに移動できる)
+        - [`Command + Shift + P`: コマンドパレット](#command--shift--p-コマンドパレット)
+        - [`Command + P`: 名前を入力して任意のファイルかシンボルに移動](#command--p-名前を入力して任意のファイルかシンボルに移動)
+        - [`control + Tab`: タブ切り替え](#control--tab-タブ切り替え)
+        - [`Command + Shift + O`: Markdown の見出しをベースに移動できる。正確にはファイル内のシンボル移動](#command--shift--o-markdown-の見出しをベースに移動できる正確にはファイル内のシンボル移動)
+        - [`control + G`: 特定行に移動](#control--g-特定行に移動)
 - [`docker`](#docker)
     - [`jshell` をサクッと使いたい](#jshell-をサクッと使いたい)
     - [docker official images](#docker-official-images)
@@ -193,9 +197,32 @@ https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-re
 keyboard-shortcuts-macos.pdf
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 
-### `Command + Shift + O`: Markdown の見出しをベースに移動できる
+### `Command + Shift + P`: コマンドパレット
+
+雑に検索してショートカットを実行してくれる
+
+Visual Studio Code User Interface  
+https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette
+
+> `⌘P` will let you navigate to any file or symbol by typing its name
+> `⌃⇧Tab` will cycle you through the last set of files opened
+> `⇧⌘P` will bring you directly to the editor commands
+> `⇧⌘O` will let you navigate to a specific symbol in a file
+> `⌃G` will let you navigate to a specific line in a file
+
+### `Command + P`: 名前を入力して任意のファイルかシンボルに移動
+
+### `control + Tab`: タブ切り替え
+
+`control + Shift + Tab` で逆順
+
+### `Command + Shift + O`: Markdown の見出しをベースに移動できる。正確にはファイル内のシンボル移動
 
 便利
+
+### `control + G`: 特定行に移動
+
+Mac だと若干押しづらくない？
 
 # `docker`
 
