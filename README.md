@@ -103,6 +103,8 @@
 - [one liner](#one-liner)
     - [`while`](#while)
     - [`for`](#for)
+- [英語](#英語)
+    - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
 - [便利な Web サイト](#便利な-web-サイト)
     - [自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい](#自分のグローバル-ip-を知りたい特定の-ip-アドレスの位置情報とか調べたい)
         - [ipinfo.io](#ipinfoio)
@@ -1083,6 +1085,19 @@ https://linuxjm.osdn.jp/html/gnumaniak/man1/printenv.1.html
 $ for i in {1..5}; do echo $i; done
 $ for ( ; ; ); do date; done
 ```
+
+# 英語
+
+## 苦情とかのクレーム: complaint
+
+complaintの意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/complaint
+
+> Make a complaint
+> クレームを言う
+
+> I received a complaint.
+> 私は、苦情を受けとった
 
 # 便利な Web サイト
 
