@@ -36,6 +36,12 @@
     - [`echo -e '1\n2\n3' | wc -l`: 行数をカウントしたい](#echo--e-1\n2\n3--wc--l-行数をカウントしたい)
     - [`pbpaste | wc -w`: クリップボードにコピーした文字列の長さを知りたい](#pbpaste--wc--w-クリップボードにコピーした文字列の長さを知りたい)
 - [`cut`: 受け取った文字列を分割して扱いたい](#cut-受け取った文字列を分割して扱いたい)
+- [圧縮, 展開](#圧縮-展開)
+    - [zip](#zip)
+        - [`zip archived.zip hoge.txt`: ファイル圧縮](#zip-archivedzip-hogetxt-ファイル圧縮)
+        - [`zip -r archived.zip ./hogedir`: ディレクトリ圧縮](#zip--r-archivedzip-hogedir-ディレクトリ圧縮)
+        - [`zipinfo archived.zip`: 圧縮ファイルの情報を見る](#zipinfo-archivedzip-圧縮ファイルの情報を見る)
+    - [`unzip archived.zip`: 圧縮ファイルの展開](#unzip-archivedzip-圧縮ファイルの展開)
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
 - [Git](#git)
@@ -439,6 +445,78 @@ https://www.freebsd.org/cgi/man.cgi?cut
 
 Man page of CUT
 https://linuxjm.osdn.jp/html/GNU_coreutils/man1/cut.1.html
+
+# 圧縮, 展開
+
+## zip
+
+Zip (file format) - Wikipedia  
+https://en.wikipedia.org/wiki/Zip_(file_format)
+
+APPNOTE.TXT  
+https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT
+
+ISO - ISO/IEC 21320-1:2015 - Information technology -- Document Container File -- Part 1: Core  
+https://www.iso.org/standard/60101.html
+
+zip(1): package/compress files - Linux man page  
+https://linux.die.net/man/1/zip
+
+zip  
+https://www.freebsd.org/cgi/man.cgi?query=zip
+
+### `zip archived.zip hoge.txt`: ファイル圧縮
+
+```bash
+zip archived.zip hoge.txt
+  adding: hoge.txt (stored 0%)
+```
+
+### `zip -r archived.zip ./hogedir`: ディレクトリ圧縮
+
+```bash
+tree hogedir/
+hogedir/
+├── 1.txt
+└── 2.txt
+
+0 directories, 2 files
+
+zip -r archived.zip ./hogedir/
+  adding: hogedir/ (stored 0%)
+  adding: hogedir/2.txt (stored 0%)
+  adding: hogedir/1.txt (stored 0%)
+```
+
+### `zipinfo archived.zip`: 圧縮ファイルの情報を見る
+
+```bash
+zipinfo archived.zip 
+Archive:  archived.zip
+Zip file size: 618 bytes, number of entries: 4
+-rw-r--r--  3.0 unx        0 bx stor 19-Sep-06 14:05 hoge.txt
+drwxr-xr-x  3.0 unx        0 bx stor 19-Sep-06 14:06 hogedir/
+-rw-r--r--  3.0 unx        0 bx stor 19-Sep-06 14:06 hogedir/2.txt
+-rw-r--r--  3.0 unx        0 bx stor 19-Sep-06 14:06 hogedir/1.txt
+4 files, 0 bytes uncompressed, 0 bytes compressed:  0.0%
+```
+
+## `unzip archived.zip`: 圧縮ファイルの展開
+
+unzip(1) - Linux man page  
+https://linux.die.net/man/1/unzip
+
+unzip(1)  
+https://www.freebsd.org/cgi/man.cgi?query=unzip
+
+```bash
+unzip archived.zip
+Archive:  archived.zip
+replace hoge.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
+ extracting: hoge.txt                
+ extracting: hogedir/2.txt           
+ extracting: hogedir/1.txt 
+```
 
 # パフォーマンス系
 
