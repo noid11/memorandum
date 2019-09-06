@@ -47,6 +47,7 @@
 - [Git](#git)
     - [`git diff --cached filename`: add したファイルの diff が見たい](#git-diff---cached-filename-add-したファイルの-diff-が見たい)
     - [ローカルでトピックブランチ作ってマージして消す](#ローカルでトピックブランチ作ってマージして消す)
+    - [`git commit --amend -m 'fix message'`: 直前の commit メッセージ変更](#git-commit---amend--m-fix-message-直前の-commit-メッセージ変更)
     - [直前の commit 取り消し](#直前の-commit-取り消し)
     - [ファイルやディレクトリのリネーム](#ファイルやディレクトリのリネーム)
     - [プライベートな GitHub アカウントで使ってる Git ユーザーを設定する](#プライベートな-github-アカウントで使ってる-git-ユーザーを設定する)
@@ -563,6 +564,15 @@ git push origin master
 # トピックブランチ削除
 git branch -d topic-name
 ```
+
+## `git commit --amend -m 'fix message'`: 直前の commit メッセージ変更
+
+```bash
+git commit --amend -m 'fix message'
+```
+
+Git - git-commit Documentation  
+https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend
 
 ## 直前の commit 取り消し
 
