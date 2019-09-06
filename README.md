@@ -18,6 +18,7 @@
         - [`control + Tab`: タブ切り替え](#control--tab-タブ切り替え)
         - [`Command + Shift + O`: Markdown の見出しをベースに移動できる。正確にはファイル内のシンボル移動](#command--shift--o-markdown-の見出しをベースに移動できる正確にはファイル内のシンボル移動)
         - [`control + G`: 特定行に移動](#control--g-特定行に移動)
+        - [`Command + K -> Z`: Zen Mode](#command--k---z-zen-mode)
 - [`docker`](#docker)
     - [`jshell` をサクッと使いたい](#jshell-をサクッと使いたい)
     - [docker official images](#docker-official-images)
@@ -234,6 +235,13 @@ https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette
 ### `control + G`: 特定行に移動
 
 Mac だと若干押しづらくない？
+
+### `Command + K -> Z`: Zen Mode
+
+Visual Studio Code Tips and Tricks  
+https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_zen-mode
+
+`Esc` で解除
 
 # `docker`
 
