@@ -46,6 +46,7 @@
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
 - [Git](#git)
+    - [`git log -1`, `git log -n 1`: 直前の commit log を見たい](#git-log--1-git-log--n-1-直前の-commit-log-を見たい)
     - [`git diff --cached filename`: add したファイルの diff が見たい](#git-diff---cached-filename-add-したファイルの-diff-が見たい)
     - [ローカルでトピックブランチ作ってマージして消す](#ローカルでトピックブランチ作ってマージして消す)
     - [`git commit --amend -m 'fix message'`: 直前の commit メッセージ変更](#git-commit---amend--m-fix-message-直前の-commit-メッセージ変更)
@@ -541,6 +542,20 @@ yes > /dev/null &
 
 Git - Reference  
 https://git-scm.com/docs
+
+## `git log -1`, `git log -n 1`: 直前の commit log を見たい
+
+git account 間違ってないかチェックするのに使う
+
+```bash
+git log -1
+```
+
+Git - git-log Documentation  
+https://git-scm.com/docs/git-log#Documentation/git-log.txt--ltnumbergt
+
+> -<number>
+> -n <number> 
 
 ## `git diff --cached filename`: add したファイルの diff が見たい
 
