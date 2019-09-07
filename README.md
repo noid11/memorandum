@@ -2,6 +2,8 @@
 
 <!-- TOC -->
 
+- [`python`](#python)
+    - [`python -m http.server 8000`: http server をサクッと動かす](#python--m-httpserver-8000-http-server-をサクッと動かす)
 - [`npm`: Node Package Manager](#npm-node-package-manager)
     - [`npm` cli](#npm-cli)
         - [`npm init`, `npm install package-name`: 初期セットアップ](#npm-init-npm-install-package-name-初期セットアップ)
@@ -140,6 +142,45 @@
         - [JSON Schema](#json-schema)
 
 <!-- /TOC -->
+
+# `python`
+
+3.6.9 Documentation  
+https://docs.python.org/ja/3.6/
+
+## `python -m http.server 8000`: http server をサクッと動かす
+
+```bash
+python -m http.server 8000
+```
+
+1. コマンドラインと環境 — Python 3.7.4 ドキュメント  
+https://docs.python.org/ja/3/using/cmdline.html#cmdoption-m
+
+> -m <module-name>
+>
+>    sys.path から指定されたモジュール名のモジュールを探し、その内容を __main__ モジュールとして実行します。
+>
+>    引数は module 名なので、拡張子 (.py) を含めてはいけません。モジュール名は有効な Python の絶対モジュール名 (absolute module name) であるべきですが、実装がそれを強制しているとは限りません (例えば、ハイフンを名前に含める事を許可するかもしれません)。
+
+21.22. http.server --- HTTP サーバ — Python 3.6.9 ドキュメント  
+https://docs.python.org/ja/3.6/library/http.server.html
+
+> このモジュールは HTTP (web) サーバを実装するためのクラスを提供しています。
+
+21.22. http.server --- HTTP サーバ — Python 3.6.9 ドキュメント  
+https://docs.python.org/ja/3.6/library/http.server.html#http.server.SimpleHTTPRequestHandler
+
+> http.server can also be invoked directly using the -m switch of the interpreter with a port number argument. Similar to the previous example, this serves files relative to the current directory:
+> 
+> python -m http.server 8000
+>
+> By default, server binds itself to all interfaces. The option -b/--bind specifies a specific address to which it should bind. For example, the following command causes the server to bind to localhost only:
+> 
+> python -m http.server 8000 --bind 127.0.0.1
+> 
+> バージョン 3.4 で追加: --bind 引数が導入されました。
+
 
 # `npm`: Node Package Manager
 
