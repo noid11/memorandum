@@ -668,10 +668,10 @@ https://git-scm.com/docs/git-mv
 ```bash
 git config --local user.name itooww
 git config --local user.email xxxxxxx+itooww@users.noreply.github.com
+git config --list --local
 ```
 
 `user.email` に設定するメアドは https://github.com/settings/emails を確認する。
-
 
 # AWS CLI
 
