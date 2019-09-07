@@ -103,9 +103,10 @@
 - [XML を jq 的に整形したい](#xml-を-jq-的に整形したい)
     - [参考](#参考)
 - [環境変数一覧を表示したい](#環境変数一覧を表示したい)
-- [one liner](#one-liner)
+- [bash](#bash)
     - [`while`](#while)
     - [`for`](#for)
+    - [交互にコマンドを実行するスクリプト](#交互にコマンドを実行するスクリプト)
 - [英語](#英語)
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
 - [便利な Web サイト](#便利な-web-サイト)
@@ -1127,7 +1128,7 @@ $ printenv
 Man page of printenv
 https://linuxjm.osdn.jp/html/gnumaniak/man1/printenv.1.html
 
-# one liner
+# bash
 
 ## `while`
 
@@ -1140,6 +1141,34 @@ https://linuxjm.osdn.jp/html/gnumaniak/man1/printenv.1.html
 ```bash
 $ for i in {1..5}; do echo $i; done
 $ for ( ; ; ); do date; done
+```
+
+## 交互にコマンドを実行するスクリプト
+
+alternately-commands-executor.sh
+
+```sh
+#!/bin/sh
+SLEEP_INTERVAL=1
+
+for i in {1..10}; do
+    sleep $SLEEP_INTERVAL;
+    echo $i
+    if [ $(($i % 2)) -eq 0 ]; then
+        date
+        echo hoge
+    else
+        date
+        echo fuga
+    fi
+done
+```
+
+実行
+
+```bash
+chmod 755 ./alternately-commands-executor.sh
+./alternately-commands-executor.sh
 ```
 
 # 英語
