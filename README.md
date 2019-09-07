@@ -48,6 +48,9 @@
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
 - [Git](#git)
+    - [`.gitignore` あれこれ](#gitignore-あれこれ)
+    - [`git rm filename`: Git で管理しているファイルを削除したい](#git-rm-filename-git-で管理しているファイルを削除したい)
+    - [`git rm --cached filename`: 特定ファイルを削除せずに Git 管理から外したい](#git-rm---cached-filename-特定ファイルを削除せずに-git-管理から外したい)
     - [`git log -1`, `git log -n 1`: 直前の commit log を見たい](#git-log--1-git-log--n-1-直前の-commit-log-を見たい)
     - [`git diff --cached filename`: add したファイルの diff が見たい](#git-diff---cached-filename-add-したファイルの-diff-が見たい)
     - [ローカルでトピックブランチ作ってマージして消す](#ローカルでトピックブランチ作ってマージして消す)
@@ -584,6 +587,67 @@ yes > /dev/null &
 
 Git - Reference  
 https://git-scm.com/docs
+
+## `.gitignore` あれこれ
+
+Git - gitignore Documentation  
+https://git-scm.com/docs/gitignore
+
+[Git] .gitignoreの仕様詳解 - Qiita  
+https://qiita.com/anqooqie/items/110957797b3d5280c44f
+
+気付いたら.gitignoreはgiboで自動生成する時代になっていた - Qiita  
+https://qiita.com/tmknom/items/c4bcebe17d25381fa45d
+
+simonwhitaker/gibo: Easy access to gitignore boilerplates  
+https://github.com/simonwhitaker/gibo
+
+## `git rm filename`: Git で管理しているファイルを削除したい
+
+```bash
+# ファイル指定
+git rm filename
+
+# ディレクトリ
+git rm -r /path/to/dir
+```
+
+Git - git-rm Documentation  
+https://git-scm.com/docs/git-rm
+
+> DESCRIPTION
+> 
+> Remove files from the index, or from the working tree and the index. git rm will not remove a file from just your working directory. (There is no option to remove a file only from the working tree and yet keep it in the index; use /bin/rm if you want to do that.) The files being removed have to be identical to the tip of the branch, and no updates to their contents can be staged in the index, though that default behavior can be overridden with the -f option. When --cached is given, the staged content has to match either the tip of the branch or the file on disk, allowing the file to be removed from just the index.
+
+> -r
+>     Allow recursive removal when a leading directory name is given.
+
+## `git rm --cached filename`: 特定ファイルを削除せずに Git 管理から外したい
+
+`.gitignore` 作るの忘れて commit してしまった場合など
+
+```bash
+# ファイル指定
+git rm --cached filename
+
+# ディレクトリ
+git rm -r --cached /path/to/dir
+```
+
+Git - git-rm Documentation  
+https://git-scm.com/docs/git-rm
+
+> DESCRIPTION
+> 
+> Remove files from the index, or from the working tree and the index. git rm will not remove a file from just your working directory. (There is no option to remove a file only from the working tree and yet keep it in the index; use /bin/rm if you want to do that.) The files being removed have to be identical to the tip of the branch, and no updates to their contents can be staged in the index, though that default behavior can be overridden with the -f option. When --cached is given, the staged content has to match either the tip of the branch or the file on disk, allowing the file to be removed from just the index.
+
+> -r
+>     Allow recursive removal when a leading directory name is given.
+
+> --cached
+>     Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.
+
+
 
 ## `git log -1`, `git log -n 1`: 直前の commit log を見たい
 
