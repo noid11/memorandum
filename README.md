@@ -112,6 +112,7 @@
     - [交互にコマンドを実行するスクリプト](#交互にコマンドを実行するスクリプト)
 - [英語](#英語)
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
+    - [appearance: 外観](#appearance-外観)
 - [便利な Web サイト](#便利な-web-サイト)
     - [自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい](#自分のグローバル-ip-を知りたい特定の-ip-アドレスの位置情報とか調べたい)
         - [ipinfo.io](#ipinfoio)
@@ -1247,6 +1248,21 @@ https://ejje.weblio.jp/content/complaint
 
 > I received a complaint.
 > 私は、苦情を受けとった
+
+## appearance: 外観
+
+IntelliJ の外観設定とかで使われている
+
+Appearance - Help | IntelliJ IDEA  
+https://www.jetbrains.com/help/idea/settings-appearance.html
+
+> Use this page to change the overall look and feel of your IDE.
+
+appearanceの意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/appearance
+
+> 主な意味
+> 	出現(すること)、(会などに)姿を見せること、出席、出演、出場、出頭、出廷、(書物の)出版、発刊、(記事の)掲載
 
 # 便利な Web サイト
 
