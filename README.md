@@ -59,6 +59,8 @@
     - [ファイルやディレクトリのリネーム](#ファイルやディレクトリのリネーム)
     - [プライベートな GitHub アカウントで使ってる Git ユーザーを設定する](#プライベートな-github-アカウントで使ってる-git-ユーザーを設定する)
 - [AWS CLI](#aws-cli)
+    - [`aws configure --profile hoge`: profile 追加](#aws-configure---profile-hoge-profile-追加)
+    - [AWS CLI で IAM Role のクレデンシャルを使う](#aws-cli-で-iam-role-のクレデンシャルを使う)
     - [ECS/Fargate](#ecsfargate)
         - [`run-task`: タスク実行](#run-task-タスク実行)
             - [Fargage](#fargage)
@@ -739,6 +741,34 @@ git config --list --local
 `user.email` に設定するメアドは https://github.com/settings/emails を確認する。
 
 # AWS CLI
+
+## `aws configure --profile hoge`: profile 追加
+
+configure — AWS CLI 1.16.234 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/configure/index.html
+
+```bash
+aws configure --profile hoge
+```
+
+## AWS CLI で IAM Role のクレデンシャルを使う
+
+AWS CLI での IAM ロールの使用 - AWS Command Line Interface  
+https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-configure-role.html
+
+`~/.aws/credentials` に下記のようなフォーマットで設定を追記
+
+```
+[profile roleprofile]
+role_arn = arn:aws:iam::123456789012:role/sample-role
+credential_source = assume role 元の profile name
+```
+
+あとは IAM Role の信頼関係で AssumeRole を許可すれば使える。
+
+```bash
+aws ec2 describe-regions --profile roleprofile
+```
 
 ## ECS/Fargate
 
