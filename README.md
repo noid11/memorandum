@@ -124,6 +124,7 @@
     - [OAuth 2.0 を試したい](#oauth-20-を試したい)
     - [OpenID Connect を試したい](#openid-connect-を試したい)
     - [SAML デコードしたい](#saml-デコードしたい)
+    - [E-ONTAP](#e-ontap)
 - [仕様とかリファレンスとか](#仕様とかリファレンスとか)
     - [AWS Guides and API Reference](#aws-guides-and-api-reference)
     - [AWS CLI Reference](#aws-cli-reference)
@@ -1364,6 +1365,31 @@ https://openidconnect.net/
 
 SAML Token - samltool.io  
 https://samltool.io/
+
+## E-ONTAP
+
+Welcome to the E-ONTAP  
+https://www.e-ontap.com/
+
+DNS Study  
+https://www.e-ontap.com/dns/
+
+DNS 温泉 5 (2018) (5)  
+https://www.e-ontap.com/dns/onsen5/#(5)
+
+> DNSの学び方
+> 
+>     ネット? 本? ほとんどでたらめか不十分
+>     実環境から学ぶ? 実装も運用もバラバラでほとんど間違ってます。
+>     何を頼れば? RFC しか拠り所はありません。(それも怪しいのに他は如何や)
+>     RFC 難しい? はい。読んでも冗長、難解、不正確です。
+>     どうすれば? 実装を触りつつ RFC を解釈していきましょう。
+>     独学できる? 無理です。DNS 温泉で学ぶ仲間をつくりましょう。
+>     今回の DNS 温泉は超初心者向けと聴いたけれど難しくない?
+>     難しいです。これから山を登ろうという人に山を見せないでどうしますか。
+>     (それでも裾野のごく一部ですが簡単そうな絵本を見せるだけよりはまし)
+>     最初から全部理解しようとする必要はないし、それは無理です。
+>     わかった気になるのが危ない。私もわからないことだらけです。 
 
 # 仕様とかリファレンスとか
 
