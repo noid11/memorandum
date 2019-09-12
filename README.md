@@ -125,6 +125,9 @@
     - [OpenID Connect を試したい](#openid-connect-を試したい)
     - [SAML デコードしたい](#saml-デコードしたい)
     - [E-ONTAP](#e-ontap)
+    - [IPA: Information-technology Promotion Agency, Japan](#ipa-information-technology-promotion-agency-japan)
+        - [インターネットセキュリティ小辞典](#インターネットセキュリティ小辞典)
+        - [セキュリティ関連 RFC](#セキュリティ関連-rfc)
 - [仕様とかリファレンスとか](#仕様とかリファレンスとか)
     - [AWS Guides and API Reference](#aws-guides-and-api-reference)
     - [AWS CLI Reference](#aws-cli-reference)
@@ -1390,6 +1393,20 @@ https://www.e-ontap.com/dns/onsen5/#(5)
 >     (それでも裾野のごく一部ですが簡単そうな絵本を見せるだけよりはまし)
 >     最初から全部理解しようとする必要はないし、それは無理です。
 >     わかった気になるのが危ない。私もわからないことだらけです。 
+
+## IPA: Information-technology Promotion Agency, Japan
+
+### インターネットセキュリティ小辞典
+
+Internet Security Glossary  
+https://www.ipa.go.jp/security/rfc/RFC2828-00JA.html
+
+
+### セキュリティ関連 RFC
+
+セキュリティ関連 RFC：IPA 独立行政法人 情報処理推進機構  
+https://www.ipa.go.jp/security/rfc/RFC.html
+
 
 # 仕様とかリファレンスとか
 
