@@ -116,6 +116,7 @@
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
     - [appearance: 外観](#appearance-外観)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [AWS CLI と AWS Tools for PowerShell のコマンド対応表](#aws-cli-と-aws-tools-for-powershell-のコマンド対応表)
     - [自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい](#自分のグローバル-ip-を知りたい特定の-ip-アドレスの位置情報とか調べたい)
         - [ipinfo.io](#ipinfoio)
         - [checkip](#checkip)
@@ -1299,6 +1300,14 @@ https://ejje.weblio.jp/content/appearance
 > 	出現(すること)、(会などに)姿を見せること、出席、出演、出場、出頭、出廷、(書物の)出版、発刊、(記事の)掲載
 
 # 便利な Web サイト
+
+## AWS CLI と AWS Tools for PowerShell のコマンド対応表
+
+AWS CLI -eq PowerShell  
+https://aws-cli-eq-pwsh.shibata.tech/
+
+stknohg/aws-cli-eq-pwsh: AWS CLI -eq PowerShell  
+https://github.com/stknohg/aws-cli-eq-pwsh/
 
 ## 自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい
 
