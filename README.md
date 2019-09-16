@@ -116,6 +116,7 @@
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
     - [appearance: 外観](#appearance-外観)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [EC2, RDS の Instance 早見表](#ec2-rds-の-instance-早見表)
     - [AWS CLI と AWS Tools for PowerShell のコマンド対応表](#aws-cli-と-aws-tools-for-powershell-のコマンド対応表)
     - [自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい](#自分のグローバル-ip-を知りたい特定の-ip-アドレスの位置情報とか調べたい)
         - [ipinfo.io](#ipinfoio)
@@ -1303,6 +1304,14 @@ https://ejje.weblio.jp/content/appearance
 > 	出現(すること)、(会などに)姿を見せること、出席、出演、出場、出頭、出廷、(書物の)出版、発刊、(記事の)掲載
 
 # 便利な Web サイト
+
+## EC2, RDS の Instance 早見表
+
+Amazon EC2 Instance Comparison  
+https://ec2instances.info/
+
+powdahound/ec2instances.info: Amazon EC2 instance comparison site  
+https://github.com/powdahound/ec2instances.info/
 
 ## AWS CLI と AWS Tools for PowerShell のコマンド対応表
 
