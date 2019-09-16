@@ -156,6 +156,7 @@
     - [YAML: Ain't Markup Language](#yaml-aint-markup-language)
     - [JSON: JavaScript Object Notation](#json-javascript-object-notation)
         - [JSON Schema](#json-schema)
+    - [NET Core CLI](#net-core-cli)
 
 <!-- /TOC -->
 
@@ -1592,3 +1593,8 @@ https://json-schema.org/
 
 Specification | JSON Schema
 https://json-schema.org/specification.html
+
+## .NET Core CLI
+
+.NET Core コマンドライン インターフェイス (CLI) ツール - .NET Core CLI | Microsoft Docs  
+https://docs.microsoft.com/ja-jp/dotnet/core/tools/?tabs=netcore2x
