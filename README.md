@@ -79,6 +79,7 @@
         - [`describe-stack-resources`: スタックのリソース取得](#describe-stack-resources-スタックのリソース取得)
         - [`describe-stacks`: スタック情報取得](#describe-stacks-スタック情報取得)
         - [`delete-stack`: スタック削除。](#delete-stack-スタック削除)
+- [AWS Chalice](#aws-chalice)
 - [ランダム文字列生成](#ランダム文字列生成)
 - [pandoc を使って markdown を XWiki 記法に変換](#pandoc-を使って-markdown-を-xwiki-記法に変換)
     - [参考](#参考)
@@ -1011,6 +1012,16 @@ https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack.htm
 DeletionPolicy 属性 - AWS CloudFormation
 https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html
 
+# AWS Chalice
+
+aws/chalice: Python Serverless Microframework for AWS  
+https://github.com/aws/chalice
+
+AWS Chalice — Python Serverless Microframework for AWS 1.11.0 documentation  
+https://chalice.readthedocs.io/en/latest/
+
+AWS Chalice Workshop — AWS Chalice Workshop 0.0.1 documentation  
+https://chalice-workshop.readthedocs.io/en/latest/index.html
 
 # ランダム文字列生成
 
