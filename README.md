@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 - [`python`](#python)
+    - [`python -m json.tool`: jq が無い環境で json を見やすく表示する](#python--m-jsontool-jq-が無い環境で-json-を見やすく表示する)
     - [`python -m http.server 8000`: http server をサクッと動かす](#python--m-httpserver-8000-http-server-をサクッと動かす)
 - [`npm`: Node Package Manager](#npm-node-package-manager)
     - [`npm` cli](#npm-cli)
@@ -166,6 +167,42 @@
 
 3.6.9 Documentation  
 https://docs.python.org/ja/3.6/
+
+## `python -m json.tool`: jq が無い環境で json を見やすく表示する
+
+```bash
+$ echo '{"json": "obj", "a": "b"}' | python -m json.tool
+{
+    "json": "obj",
+    "a": "b"
+}
+
+# キーのアルファベット順にソート
+$ echo '{"json": "obj", "a": "b"}' | python -m json.tool --sort-keys
+{
+    "a": "b",
+    "json": "obj"
+}
+
+# help
+$ python -m json.tool -h
+usage: python -m json.tool [-h] [--sort-keys] [infile] [outfile]
+
+A simple command line interface for json module to validate and pretty-print
+JSON objects.
+
+positional arguments:
+  infile       a JSON file to be validated or pretty-printed
+  outfile      write the output of infile to outfile
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --sort-keys  sort the output of dictionaries alphabetically by key
+```
+
+json --- JSON エンコーダおよびデコーダ — Python 3.7.4 ドキュメント  
+https://docs.python.org/ja/3/library/json.html#module-json.tool
+
 
 ## `python -m http.server 8000`: http server をサクッと動かす
 
