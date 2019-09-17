@@ -133,6 +133,7 @@
     - [IPA: Information-technology Promotion Agency, Japan](#ipa-information-technology-promotion-agency-japan)
         - [インターネットセキュリティ小辞典](#インターネットセキュリティ小辞典)
         - [セキュリティ関連 RFC](#セキュリティ関連-rfc)
+    - [Linux のメモリ計算](#linux-のメモリ計算)
 - [仕様とかリファレンスとか](#仕様とかリファレンスとか)
     - [AWS Guides and API Reference](#aws-guides-and-api-reference)
     - [AWS CLI Reference](#aws-cli-reference)
@@ -1481,6 +1482,11 @@ https://www.ipa.go.jp/security/rfc/RFC2828-00JA.html
 セキュリティ関連 RFC：IPA 独立行政法人 情報処理推進機構  
 https://www.ipa.go.jp/security/rfc/RFC.html
 
+
+## Linux のメモリ計算
+
+【RHEL】linuxメモリのfreeとmeminfoの関係を図解し利用率の計算方法を説明してみる - のぴぴのメモ  
+http://nopipi.hatenablog.com/entry/2015/09/13/181026
 
 # 仕様とかリファレンスとか
 
