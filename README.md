@@ -116,6 +116,8 @@
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
     - [appearance: 外観](#appearance-外観)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [AWS を図でまとめているサイト](#aws-を図でまとめているサイト)
+    - [AWS のサービスリリース履歴を管理しているサイト](#aws-のサービスリリース履歴を管理しているサイト)
     - [EC2, RDS の Instance 早見表](#ec2-rds-の-instance-早見表)
     - [AWS CLI と AWS Tools for PowerShell のコマンド対応表](#aws-cli-と-aws-tools-for-powershell-のコマンド対応表)
     - [自分のグローバル IP を知りたい、特定の IP アドレスの位置情報とか調べたい](#自分のグローバル-ip-を知りたい特定の-ip-アドレスの位置情報とか調べたい)
@@ -1305,6 +1307,19 @@ https://ejje.weblio.jp/content/appearance
 > 	出現(すること)、(会などに)姿を見せること、出席、出演、出場、出頭、出廷、(書物の)出版、発刊、(記事の)掲載
 
 # 便利な Web サイト
+
+## AWS を図でまとめているサイト
+
+Jerry Hargrove  
+https://www.awsgeek.com/
+
+## AWS のサービスリリース履歴を管理しているサイト
+
+Jerry Hargrove | History of Amazon Web Services  
+https://www.awsgeek.com/pages/AWS-History/
+
+AwsGeek/aws-history  
+https://github.com/AwsGeek/aws-history
 
 ## EC2, RDS の Instance 早見表
 
