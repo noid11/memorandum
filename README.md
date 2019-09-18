@@ -117,6 +117,9 @@
 - [英語](#英語)
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
     - [appearance: 外観](#appearance-外観)
+- [気になったブログ記事など](#気になったブログ記事など)
+    - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
+    - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
     - [AWS を図でまとめているサイト](#aws-を図でまとめているサイト)
     - [AWS のサービスリリース履歴を管理しているサイト](#aws-のサービスリリース履歴を管理しているサイト)
@@ -1354,6 +1357,32 @@ https://ejje.weblio.jp/content/appearance
 
 > 主な意味
 > 	出現(すること)、(会などに)姿を見せること、出席、出演、出場、出頭、出廷、(書物の)出版、発刊、(記事の)掲載
+
+# 気になったブログ記事など
+
+## OAuth の Implicit grant と Authorization code grant について
+
+OAuth 2.0 の Implicit grant 終了のお知らせ - r-weblife  
+https://ritou.hatenablog.com/entry/2018/11/12/110613
+
+OAuth 2.0 Implicit Flowをユーザー認証に利用する際のリスクと対策方法について #idcon - r-weblife  
+https://ritou.hatenablog.com/entry/20120206/1328484575  
+
+RFC7636として発行されたOAuth PKCEとは - r-weblife  
+https://ritou.hatenablog.com/entry/20151018/1445181974
+
+OAuth 2.0 / OpenID Connectにおけるstate, nonce, PKCEの限界を意識する - r-weblife  
+https://ritou.hatenablog.com/entry/2019/07/08/070000
+
+## `0.0.0.0` と `127.0.0.1` と `localhot`
+
+0.0.0.0にはアクセスしないこと - Qiita  
+https://qiita.com/amuyikam/items/0063df223aed40193ba9
+
+> まとめ
+>     Webサーバでよく見る0.0.0.0はこのホストのすべてのインターフェースでLISTENするという意味
+>     宛先0.0.0.0は無効なアドレスなので、何も考えずにブラウザに0.0.0.0:8000のように入れるのは誤り
+>     ただしOSによっては0.0.0.0を127.0.0.1にルーティングしていることがあるため表面上は問題ないように見える(CORSには引っかかるので混同していると痛い目見るかも)
 
 # 便利な Web サイト
 
