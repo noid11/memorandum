@@ -167,6 +167,7 @@
         - [JSON Schema](#json-schema)
     - [NET Core CLI](#net-core-cli)
     - [PostgreSQL](#postgresql)
+    - [MySQL](#mysql)
 
 <!-- /TOC -->
 
@@ -1720,3 +1721,14 @@ https://github.com/s-hironobu/postgresqlref
 
 The Art of PostgreSQL: a modern PostgreSQL book in 2019  
 https://theartofpostgresql.com/
+
+## MySQL
+
+MySQL :: MySQL Documentation  
+https://dev.mysql.com/doc/
+
+日本 MySQL ユーザ会  
+http://www.mysql.gr.jp/
+
+MySQL Casual - 資料一覧 - connpass  
+https://mysql-casual.connpass.com/presentation/
