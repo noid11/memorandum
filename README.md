@@ -1717,3 +1717,6 @@ https://lets.postgresql.jp/
 
 s-hironobu/postgresqlref: PostgreSQL 全機能バイブルの原稿  
 https://github.com/s-hironobu/postgresqlref
+
+The Art of PostgreSQL: a modern PostgreSQL book in 2019  
+https://theartofpostgresql.com/
