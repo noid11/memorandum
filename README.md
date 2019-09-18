@@ -166,6 +166,7 @@
     - [JSON: JavaScript Object Notation](#json-javascript-object-notation)
         - [JSON Schema](#json-schema)
     - [NET Core CLI](#net-core-cli)
+    - [PostgreSQL](#postgresql)
 
 <!-- /TOC -->
 
@@ -1702,3 +1703,17 @@ https://json-schema.org/specification.html
 
 .NET Core コマンドライン インターフェイス (CLI) ツール - .NET Core CLI | Microsoft Docs  
 https://docs.microsoft.com/ja-jp/dotnet/core/tools/?tabs=netcore2x
+
+## PostgreSQL
+
+PostgreSQL: The world's most advanced open source database  
+https://www.postgresql.org/
+
+ドキュメント | 日本PostgreSQLユーザ会  
+https://www.postgresql.jp/docupage
+
+ホーム | Let's Postgres  
+https://lets.postgresql.jp/
+
+s-hironobu/postgresqlref: PostgreSQL 全機能バイブルの原稿  
+https://github.com/s-hironobu/postgresqlref
