@@ -123,6 +123,8 @@
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
     - [迷路生成アルゴリズムのサンプル](#迷路生成アルゴリズムのサンプル)
+    - [AWS, GCP, Azure 等のアイコンを使って構成図を作成できるサイト](#aws-gcp-azure-等のアイコンを使って構成図を作成できるサイト)
+    - [AWS の構成図を作成できるサイト](#aws-の構成図を作成できるサイト)
     - [AWS を図でまとめているサイト](#aws-を図でまとめているサイト)
     - [AWS のサービスリリース履歴を管理しているサイト](#aws-のサービスリリース履歴を管理しているサイト)
     - [EC2, RDS の Instance 早見表](#ec2-rds-の-instance-早見表)
@@ -1429,6 +1431,16 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 
 Maze Algorithms  
 https://www.jamisbuck.org/mazes/
+
+## AWS, GCP, Azure 等のアイコンを使って構成図を作成できるサイト
+
+Online Diagram and Flowchart Software | Cacoo  
+https://cacoo.com/
+
+## AWS の構成図を作成できるサイト
+
+Cloudcraft – Draw AWS diagrams  
+https://cloudcraft.co/
 
 ## AWS を図でまとめているサイト
 
