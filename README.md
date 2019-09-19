@@ -8,6 +8,7 @@
 - [`npm`: Node Package Manager](#npm-node-package-manager)
     - [`npm` cli](#npm-cli)
         - [`npm init`, `npm install package-name`: 初期セットアップ](#npm-init-npm-install-package-name-初期セットアップ)
+        - [`npm install package-name@xxx`: バージョンを指定してパッケージをインストールする](#npm-install-package-namexxx-バージョンを指定してパッケージをインストールする)
     - [`npx`: execute npm package binaries](#npx-execute-npm-package-binaries)
 - [Visual Studio Code](#visual-studio-code)
     - [Extensions](#extensions)
@@ -268,6 +269,41 @@ npm init
 # ローカルにパッケージをインストールする package.json への追記は勝手にやってくれる
 npm install aws-sdk
 ```
+
+### `npm install package-name@xxx`: バージョンを指定してパッケージをインストールする
+
+```bash
+$ npm install aws-sdk@2.531.0
+```
+
+npm-install | npm Documentation  
+https://docs.npmjs.com/cli/install
+
+バージョン指定
+
+> npm install [<@scope>/]<name>@<version>:
+> 
+> Install the specified version of the package. This will fail if the version has not been published to the registry.
+> 
+> Example:
+> 
+>     npm install sax@0.1.1
+>     npm install @myorg/privatepackage@1.5.0
+
+バージョンレンジ指定
+
+> npm install [<@scope>/]<name>@<version range>:
+> 
+> Install a version of the package matching the specified version range. This will follow the same rules for resolving dependencies described in package.json.
+> 
+> Note that most version ranges must be put in quotes so that your shell will treat it as a single argument.
+> 
+> Example:
+> 
+>     npm install sax@">=0.1.0 <0.2.0"
+>     npm install @myorg/privatepackage@">=0.1.0 <0.2.0"
+
+
 
 ## `npx`: execute npm package binaries
 
