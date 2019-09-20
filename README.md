@@ -118,6 +118,8 @@
 - [英語](#英語)
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
     - [appearance: 外観](#appearance-外観)
+    - [分かりにくくてスマヌ: `Sorry it's hard to understand.`, `Please excuse my lack of explanation.`](#分かりにくくてスマヌ-sorry-its-hard-to-understand-please-excuse-my-lack-of-explanation)
+    - [なんか追加で情報必要なら声かけて: If you need additional information, please let me know.](#なんか追加で情報必要なら声かけて-if-you-need-additional-information-please-let-me-know)
 - [気になったブログ記事など](#気になったブログ記事など)
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
@@ -1398,6 +1400,22 @@ https://ejje.weblio.jp/content/appearance
 
 > 主な意味
 > 	出現(すること)、(会などに)姿を見せること、出席、出演、出場、出頭、出廷、(書物の)出版、発刊、(記事の)掲載
+
+## 分かりにくくてスマヌ: `Sorry it's hard to understand.`, `Please excuse my lack of explanation.`
+
+Weblio和英辞書 -「わかりにくくてごめんなさい」の英語・英語例文・英語表現  
+https://ejje.weblio.jp/content/%E3%82%8F%E3%81%8B%E3%82%8A%E3%81%AB%E3%81%8F%E3%81%8F%E3%81%A6%E3%81%94%E3%82%81%E3%82%93%E3%81%AA%E3%81%95%E3%81%84
+
+説明不足でごめんなさいって英語でなんて言うの？ - DMM英会話なんてuKnow?  
+https://eikaiwa.dmm.com/uknow/questions/3917/
+
+## なんか追加で情報必要なら声かけて: If you need additional information, please let me know.
+
+簡単1分！ネイティブ表現トレーニング　ビジネス英語編 - 英語のまぐまぐ！ | 英語のまぐ！  
+https://english.mag2.com/qa_business/57.html
+
+Let me know if you need any additional information.の意味・使い方 - 英和辞典 WEBLIO辞書  
+https://ejje.weblio.jp/content/Let+me+know+if+you+need+any+additional+information.
 
 # 気になったブログ記事など
 
