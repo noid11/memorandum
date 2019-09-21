@@ -120,6 +120,7 @@
     - [appearance: 外観](#appearance-外観)
     - [分かりにくくてスマヌ: `Sorry it's hard to understand.`, `Please excuse my lack of explanation.`](#分かりにくくてスマヌ-sorry-its-hard-to-understand-please-excuse-my-lack-of-explanation)
     - [なんか追加で情報必要なら声かけて: If you need additional information, please let me know.](#なんか追加で情報必要なら声かけて-if-you-need-additional-information-please-let-me-know)
+    - [再発、再現: recurrent](#再発再現-recurrent)
 - [気になったブログ記事など](#気になったブログ記事など)
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
@@ -1416,6 +1417,14 @@ https://english.mag2.com/qa_business/57.html
 
 Let me know if you need any additional information.の意味・使い方 - 英和辞典 WEBLIO辞書  
 https://ejje.weblio.jp/content/Let+me+know+if+you+need+any+additional+information.
+
+## 再発、再現: recurrent
+
+recurrent とは 意味・読み方・表現 | Weblio英和辞書  
+https://ejje.weblio.jp/content/recurrent
+
+イシューが再発している  
+The issue has recurrent
 
 # 気になったブログ記事など
 
