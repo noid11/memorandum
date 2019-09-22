@@ -125,6 +125,7 @@
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [JavaScript チートシート](#javascript-チートシート)
     - [迷路生成アルゴリズムのサンプル](#迷路生成アルゴリズムのサンプル)
     - [AWS, GCP, Azure 等のアイコンを使って構成図を作成できるサイト](#aws-gcp-azure-等のアイコンを使って構成図を作成できるサイト)
     - [AWS の構成図を作成できるサイト](#aws-の構成図を作成できるサイト)
@@ -1453,6 +1454,11 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 >     ただしOSによっては0.0.0.0を127.0.0.1にルーティングしていることがあるため表面上は問題ないように見える(CORSには引っかかるので混同していると痛い目見るかも)  
 
 # 便利な Web サイト
+
+## JavaScript チートシート
+
+付録: JavaScriptチートシート · JavaScript Primer #jsprimer  
+https://jsprimer.net/cheetsheet/
 
 ## 迷路生成アルゴリズムのサンプル
 
