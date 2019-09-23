@@ -145,6 +145,7 @@
     - [OAuth 2.0 を試したい](#oauth-20-を試したい)
     - [OpenID Connect を試したい](#openid-connect-を試したい)
     - [SAML デコードしたい](#saml-デコードしたい)
+    - [Weh Authn 試したい](#weh-authn-試したい)
     - [E-ONTAP](#e-ontap)
     - [IPA: Information-technology Promotion Agency, Japan](#ipa-information-technology-promotion-agency-japan)
         - [インターネットセキュリティ小辞典](#インターネットセキュリティ小辞典)
@@ -1609,10 +1610,24 @@ https://developers.google.com/oauthplayground/
 OpenID Connect Playground  
 https://openidconnect.net/
 
+Okta OpenID Connect Fun!  
+https://okta-oidc-fun.herokuapp.com/continue
+
+oktadeveloper/okta-oidc-flows-example  
+https://github.com/oktadeveloper/okta-oidc-flows-example#okta-openid-connect-fun
+
 ## SAML デコードしたい
 
 SAML Token - samltool.io  
 https://samltool.io/
+
+## Weh Authn 試したい
+
+Yubico demo website  
+https://demo.yubico.com/webauthn
+
+Web Authentication Playground  
+https://dist-yycvxvsyvu.now.sh/tutorial
 
 ## E-ONTAP
 
