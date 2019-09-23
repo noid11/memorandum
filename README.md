@@ -122,6 +122,7 @@
     - [なんか追加で情報必要なら声かけて: If you need additional information, please let me know.](#なんか追加で情報必要なら声かけて-if-you-need-additional-information-please-let-me-know)
     - [再発、再現: recurrent](#再発再現-recurrent)
 - [気になったブログ記事など](#気になったブログ記事など)
+    - [AWS X-Ray SDK for the Python のローカルサンプリングルール読み込んでいる箇所の実装](#aws-x-ray-sdk-for-the-python-のローカルサンプリングルール読み込んでいる箇所の実装)
     - [MDN まとめ](#mdn-まとめ)
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
@@ -1431,6 +1432,28 @@ https://ejje.weblio.jp/content/recurrent
 The issue has recurrent
 
 # 気になったブログ記事など
+
+## AWS X-Ray SDK for the Python のローカルサンプリングルール読み込んでいる箇所の実装
+
+aws/aws-xray-sdk-python: AWS X-Ray SDK for the Python programming language  
+https://github.com/aws/aws-xray-sdk-python
+
+aws-xray-sdk · PyPI  
+https://pypi.org/project/aws-xray-sdk/
+
+aws-xray-sdk-python/sampler.py at 17dc8759e61157c55b846515581e65bad29d8940 · aws/aws-xray-sdk-python  
+https://github.com/aws/aws-xray-sdk-python/blob/17dc8759e61157c55b846515581e65bad29d8940/aws_xray_sdk/core/sampling/local/sampler.py
+
+aws-xray-sdk-python/sampling_rule.py at 17dc8759e61157c55b846515581e65bad29d8940 · aws/aws-xray-sdk-python  
+https://github.com/aws/aws-xray-sdk-python/blob/17dc8759e61157c55b846515581e65bad29d8940/aws_xray_sdk/core/sampling/local/sampling_rule.py
+
+`xray_recorder.configure` で json ファイルを読み込ませることもできるし、 Python の dict オブジェクトで指定することも出来るっぽい 
+
+X-Ray SDK for Python の設定 - AWS X-Ray  
+https://docs.aws.amazon.com/ja_jp/xray/latest/devguide/xray-sdk-python-configuration.html
+
+サーバーレス環境にデプロイされたウェブフレームワークの計測 - AWS X-Ray  
+https://docs.aws.amazon.com/ja_jp/xray/latest/devguide/xray-sdk-python-serverless.html
 
 ## MDN まとめ
 
