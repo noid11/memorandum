@@ -1494,6 +1494,9 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 Authlete  
 https://www.authlete.com/ja/developers/
 
+OAuth および OpenID Connect — Authlete ナレッジベース (Beta)  
+https://kb.authlete.com/ja/s/oauth-and-openid-connect
+
 ## ランダムな JWK (JSON Web Key) を生成できるサイト
 
 mkjwk - JSON Web Key Generator  
