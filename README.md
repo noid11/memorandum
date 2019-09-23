@@ -127,6 +127,8 @@
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [OAuth 2.0, OpenID Connect の技術情報](#oauth-20-openid-connect-の技術情報)
+    - [ランダムな JWK (JSON Web Key) を生成できるサイト](#ランダムな-jwk-json-web-key-を生成できるサイト)
     - [AI 生成の顔写真](#ai-生成の顔写真)
     - [AWS のセキュリティを学べるサイト](#aws-のセキュリティを学べるサイト)
     - [JavaScript チートシート](#javascript-チートシート)
@@ -1486,6 +1488,16 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 >     ただしOSによっては0.0.0.0を127.0.0.1にルーティングしていることがあるため表面上は問題ないように見える(CORSには引っかかるので混同していると痛い目見るかも)  
 
 # 便利な Web サイト
+
+## OAuth 2.0, OpenID Connect の技術情報
+
+Authlete  
+https://www.authlete.com/ja/developers/
+
+## ランダムな JWK (JSON Web Key) を生成できるサイト
+
+mkjwk - JSON Web Key Generator  
+https://mkjwk.org/
 
 ## AI 生成の顔写真
 
