@@ -122,6 +122,7 @@
     - [なんか追加で情報必要なら声かけて: If you need additional information, please let me know.](#なんか追加で情報必要なら声かけて-if-you-need-additional-information-please-let-me-know)
     - [再発、再現: recurrent](#再発再現-recurrent)
 - [気になったブログ記事など](#気になったブログ記事など)
+    - [MDN まとめ](#mdn-まとめ)
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
@@ -1429,6 +1430,11 @@ https://ejje.weblio.jp/content/recurrent
 The issue has recurrent
 
 # 気になったブログ記事など
+
+## MDN まとめ
+
+フロントエンドエンジニア御用達の MDN web docs を網羅した - Qiita  
+https://qiita.com/snakada/items/07347d6ad10ae661fbc6
 
 ## OAuth の Implicit grant と Authorization code grant について
 
