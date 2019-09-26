@@ -126,6 +126,7 @@
     - [なんか追加で情報必要なら声かけて: If you need additional information, please let me know.](#なんか追加で情報必要なら声かけて-if-you-need-additional-information-please-let-me-know)
     - [再発、再現: recurrent](#再発再現-recurrent)
 - [気になったブログ記事など](#気になったブログ記事など)
+    - [Ｃプログラミング診断室](#ｃプログラミング診断室)
     - [AWS X-Ray SDK for the Python のローカルサンプリングルール読み込んでいる箇所の実装](#aws-x-ray-sdk-for-the-python-のローカルサンプリングルール読み込んでいる箇所の実装)
     - [MDN まとめ](#mdn-まとめ)
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
@@ -1473,6 +1474,11 @@ https://ejje.weblio.jp/content/recurrent
 The issue has recurrent
 
 # 気になったブログ記事など
+
+## Ｃプログラミング診断室
+
+Ｃプログラミング診断室  
+http://www.pro.or.jp/~fuji/mybooks/cdiag/
 
 ## AWS X-Ray SDK for the Python のローカルサンプリングルール読み込んでいる箇所の実装
 
