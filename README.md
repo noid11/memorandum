@@ -1,7 +1,10 @@
 何度も調べたくない事の備忘録。
 
+# TOC
+
 <!-- TOC -->
 
+- [TOC](#toc)
 - [`javascript`](#javascript)
     - [JSON を pretty print したい](#json-を-pretty-print-したい)
 - [`python`](#python)
