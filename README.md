@@ -64,6 +64,9 @@
 - [AWS CLI](#aws-cli)
     - [`aws configure --profile hoge`: profile 追加](#aws-configure---profile-hoge-profile-追加)
     - [AWS CLI で IAM Role のクレデンシャルを使う](#aws-cli-で-iam-role-のクレデンシャルを使う)
+    - [Pinpoint](#pinpoint)
+        - [`update-endpoint`: エンドポイントの登録、更新](#update-endpoint-エンドポイントの登録更新)
+        - [`get-entpoid`: エンドポイント取得](#get-entpoid-エンドポイント取得)
     - [ECS/Fargate](#ecsfargate)
         - [`run-task`: タスク実行](#run-task-タスク実行)
             - [Fargage](#fargage)
@@ -879,6 +882,37 @@ credential_source = assume role 元の profile name
 ```bash
 aws ec2 describe-regions --profile roleprofile
 ```
+
+## Pinpoint
+
+pinpoint — AWS CLI 1.16.246 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/pinpoint/index.html
+
+### `update-endpoint`: エンドポイントの登録、更新
+
+```bash
+REGION=us-east-1
+APPLICATION_ID=xxx
+ENDPOINT_ID=yyy
+ADDRESS=sample@example.com
+CHANNEL_TYPE=EMAIL
+aws --region $REGION pinpoint update-endpoint --application-id $APPLICATION_ID --endpoint-id $ENDPOINT_ID --endpoint-request Address=$ADDRESS,ChannelType=$CHANNEL_TYPE
+```
+
+update-endpoint — AWS CLI 1.16.246 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/pinpoint/update-endpoint.html
+
+### `get-entpoid`: エンドポイント取得
+
+```bash
+REGION=us-east-1
+APPLICATION_ID=2b46eda229614d9a9933f6df13efb341
+ENDPOINT_ID=xxx
+aws --region $REGION pinpoint get-endpoint --application-id $APPLICATION_ID --endpoint-id $ENDPOINT_ID
+```
+
+get-endpoint — AWS CLI 1.16.246 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/pinpoint/get-endpoint.html
 
 ## ECS/Fargate
 
