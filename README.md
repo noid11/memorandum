@@ -170,7 +170,7 @@
     - [AWS IAM](#aws-iam)
         - [IAM ID](#iam-id)
         - [Actions, Resources, Condition Keys](#actions-resources-condition-keys)
-    - [CloudFormation](#cloudformation)
+    - [CloudFormation Reference](#cloudformation-reference)
         - [AWS Resource and Property Types Reference](#aws-resource-and-property-types-reference)
     - [SAM: Serverless Application Model](#sam-serverless-application-model)
         - [AWS Serverless Application Model Template Specification](#aws-serverless-application-model-template-specification)
@@ -1823,11 +1823,11 @@ https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/reference_identifiers.htm
 Actions, Resources, and Condition Keys for AWS Services - AWS Identity and Access Management  
 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html
 
-## CloudFormation
+## CloudFormation Reference
 
 ### AWS Resource and Property Types Reference
 
-AWS Resource and Property Types Reference - AWS CloudFormation
+AWS Resource and Property Types Reference - AWS CloudFormation  
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html
 
 ## SAM: Serverless Application Model
