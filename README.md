@@ -2,6 +2,8 @@
 
 <!-- TOC -->
 
+- [`javascript`](#javascript)
+    - [JSON を pretty print したい](#json-を-pretty-print-したい)
 - [`python`](#python)
     - [`python -m json.tool`: jq が無い環境で json を見やすく表示する](#python--m-jsontool-jq-が無い環境で-json-を見やすく表示する)
     - [`python -m http.server 8000`: http server をサクッと動かす](#python--m-httpserver-8000-http-server-をサクッと動かす)
@@ -132,6 +134,7 @@
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [プログラミング言語やフレームワークやツールのリファレンスまとめサイト](#プログラミング言語やフレームワークやツールのリファレンスまとめサイト)
     - [OAuth 2.0, OpenID Connect の技術情報](#oauth-20-openid-connect-の技術情報)
     - [ランダムな JWK (JSON Web Key) を生成できるサイト](#ランダムな-jwk-json-web-key-を生成できるサイト)
     - [AI 生成の顔写真](#ai-生成の顔写真)
@@ -189,6 +192,60 @@
     - [MySQL](#mysql)
 
 <!-- /TOC -->
+
+# `javascript`
+
+JavaScript リファレンス - JavaScript | MDN  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference
+
+JavaScript 言語情報 - JavaScript | MDN  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Language_Resources
+
+付録: JavaScriptチートシート · JavaScript Primer #jsprimer  
+https://jsprimer.net/cheetsheet/
+
+とほほのJavaScriptリファレンス  
+http://www.tohoho-web.com/js/
+
+JavaScript and HTML DOM Reference  
+https://www.w3schools.com/jsref/default.asp
+
+JavaScript documentation — DevDocs  
+https://devdocs.io/javascript/
+
+## JSON を pretty print したい
+
+JSON.stringify の第3引数にタブとか指定すれば OK
+
+```js
+JSON.stringify(json_data, null, "\t")
+JSON.stringify(json_data, null, 4)
+```
+
+JSON.stringify() - JavaScript | MDN  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Parameters
+
+> space Optional
+>
+>    出力する JSON 文字列に可読性を目的に空白を挿入するために使う String または Number オブジェクト。これが Number のときは空白として使う空白文字の数を示します。この数字は上限が 10 に設定されていて 10 より大きい場合 10 となります。1 より小さい値は空白を使わないことを示します。これが String のときはその文字列（10 文字より長い場合はその最初の 10 文字）が空白として使われます。もしこの引数が提供されない（または null である）場合は、空白は使用されません。
+
+サンプル
+
+```bash
+$ node
+> const data = {"hoge": 1, "fuga": 2}
+undefined
+> console.log(data)
+{ hoge: 1, fuga: 2 }
+undefined
+> console.log(JSON.stringify(data, null, "\t"))
+{
+        "hoge": 1,
+        "fuga": 2
+}
+undefined
+> .exit
+```
 
 # `python`
 
@@ -1532,6 +1589,11 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 >     ただしOSによっては0.0.0.0を127.0.0.1にルーティングしていることがあるため表面上は問題ないように見える(CORSには引っかかるので混同していると痛い目見るかも)  
 
 # 便利な Web サイト
+
+## プログラミング言語やフレームワークやツールのリファレンスまとめサイト
+
+DevDocs API Documentation  
+https://devdocs.io/
 
 ## OAuth 2.0, OpenID Connect の技術情報
 
