@@ -170,6 +170,7 @@
     - [AWS IAM](#aws-iam)
         - [IAM ID](#iam-id)
         - [Actions, Resources, Condition Keys](#actions-resources-condition-keys)
+    - [AWS Encryption SDK](#aws-encryption-sdk)
     - [CloudFormation Reference](#cloudformation-reference)
         - [AWS Resource and Property Types Reference](#aws-resource-and-property-types-reference)
     - [SAM: Serverless Application Model](#sam-serverless-application-model)
@@ -1822,6 +1823,14 @@ https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/reference_identifiers.htm
 
 Actions, Resources, and Condition Keys for AWS Services - AWS Identity and Access Management  
 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html
+
+## AWS Encryption SDK
+
+What Is the AWS Encryption SDK? - AWS Encryption SDK  
+https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/introduction.html
+
+awslabs/aws-encryption-sdk-specification: AWS Encryption SDK Specification  
+https://github.com/awslabs/aws-encryption-sdk-specification
 
 ## CloudFormation Reference
 
