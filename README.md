@@ -55,6 +55,7 @@
     - [`unzip archived.zip`: 圧縮ファイルの展開](#unzip-archivedzip-圧縮ファイルの展開)
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
+    - [`seq 10 | xargs -t -P10 -n1 sh -c 'echo hoge'`: 並列にコマンドを実行したい](#seq-10--xargs--t--p10--n1-sh--c-echo-hoge-並列にコマンドを実行したい)
 - [Git](#git)
     - [`.gitignore` あれこれ](#gitignore-あれこれ)
     - [`git rm filename`: Git で管理しているファイルを削除したい](#git-rm-filename-git-で管理しているファイルを削除したい)
@@ -760,6 +761,26 @@ replace hoge.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
 ```bash
 yes > /dev/null &
 ```
+
+## `seq 10 | xargs -t -P10 -n1 sh -c 'echo hoge'`: 並列にコマンドを実行したい
+
+```bash
+seq 10 | xargs -t -P10 -n1 sh -c 'echo hoge'
+```
+
+`seq x` と `-Px` で並列して実行されるプロセス数を指定。これは `-n1` で seq で出力される数値を1つずつ xargs で指定しているコマンドの引数にする。
+上記例であれば `sh -c 'echo hoge' 1` のようになる。で、実質 1 は無視されるので `echo hoge` が実行される。
+
+`-t` で実行されるコマンドを表示してくれる。
+
+xargsでコマンドを並列実行 - Qiita  
+https://qiita.com/aosho235/items/231d6d12f56debc515f9
+
+Man page of XARGS  
+https://linuxjm.osdn.jp/html/GNU_findutils/man1/xargs.1.html
+
+GNU Parallel - GNU Project - Free Software Foundation  
+https://www.gnu.org/software/parallel/
 
 # Git
 
