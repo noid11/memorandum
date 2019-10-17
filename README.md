@@ -73,6 +73,7 @@
     - [`aws configure --profile hoge`: profile 追加](#aws-configure---profile-hoge-profile-追加)
     - [AWS CLI で IAM Role のクレデンシャルを使う](#aws-cli-で-iam-role-のクレデンシャルを使う)
     - [Pinpoint](#pinpoint)
+        - [`phone-number-validate`: 電話番号の検証](#phone-number-validate-電話番号の検証)
         - [`update-endpoint`: エンドポイントの登録、更新](#update-endpoint-エンドポイントの登録更新)
         - [`get-entpoid`: エンドポイント取得](#get-entpoid-エンドポイント取得)
     - [ECS/Fargate](#ecsfargate)
@@ -1003,6 +1004,17 @@ aws ec2 describe-regions --profile roleprofile
 
 pinpoint — AWS CLI 1.16.246 Command Reference  
 https://docs.aws.amazon.com/cli/latest/reference/pinpoint/index.html
+
+### `phone-number-validate`: 電話番号の検証
+
+Amazon Pinpoint での電話番号の検証 - Amazon Pinpoint  
+https://docs.aws.amazon.com/ja_jp/pinpoint/latest/developerguide/validate-phone-numbers.html
+
+```bash
+REGION=us-east-1
+PHONE_NUMBER=+81xxx
+aws --region $REGION pinpoint phone-number-validate --number-validate-request PhoneNumber=$PHONE_NUMBER
+```
 
 ### `update-endpoint`: エンドポイントの登録、更新
 
