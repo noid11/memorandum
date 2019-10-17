@@ -56,6 +56,8 @@
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
     - [`seq 10 | xargs -t -P10 -n1 sh -c 'echo hoge'`: 並列にコマンドを実行したい](#seq-10--xargs--t--p10--n1-sh--c-echo-hoge-並列にコマンドを実行したい)
+- [`dd`: dataset definition](#dd-dataset-definition)
+    - [ダミーファイルを作りたい](#ダミーファイルを作りたい)
 - [Git](#git)
     - [`.gitignore` あれこれ](#gitignore-あれこれ)
     - [`git rm filename`: Git で管理しているファイルを削除したい](#git-rm-filename-git-で管理しているファイルを削除したい)
@@ -781,6 +783,37 @@ https://linuxjm.osdn.jp/html/GNU_findutils/man1/xargs.1.html
 
 GNU Parallel - GNU Project - Free Software Foundation  
 https://www.gnu.org/software/parallel/
+
+# `dd`: dataset definition
+
+IBM メインフレームの言語ステートメントが由来らしい。
+
+dd (UNIX) - Wikipedia  
+https://ja.wikipedia.org/wiki/Dd_(UNIX)
+
+> dataset definitionの略であるが、IBMのメインフレームのJob Control Language（ジョブ制御言語、JCL）の「DD文」（DD statement）に由来する
+
+dd  
+https://www.freebsd.org/cgi/man.cgi?query=dd
+
+Man page of DD  
+https://linuxjm.osdn.jp/html/GNU_coreutils/man1/dd.1.html
+
+## ダミーファイルを作りたい
+
+Mac, BSD
+
+```bash
+# 1GB のファイル作成
+$ dd if=/dev/zero of=1G.txt bs=1024000 count=1000
+```
+
+Linux
+
+```bash
+# 1GB のファイル作成
+$ dd if=/dev/zero of=1G.txt bs=1M count=1000
+```
 
 # Git
 
