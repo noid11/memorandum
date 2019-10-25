@@ -59,6 +59,7 @@
 - [`dd`: dataset definition](#dd-dataset-definition)
     - [ダミーファイルを作りたい](#ダミーファイルを作りたい)
 - [Git](#git)
+    - [`git checkout .`: ファイルの変更を commit せず取り消す](#git-checkout--ファイルの変更を-commit-せず取り消す)
     - [`.gitignore` あれこれ](#gitignore-あれこれ)
     - [`git rm filename`: Git で管理しているファイルを削除したい](#git-rm-filename-git-で管理しているファイルを削除したい)
     - [`git rm --cached filename`: 特定ファイルを削除せずに Git 管理から外したい](#git-rm---cached-filename-特定ファイルを削除せずに-git-管理から外したい)
@@ -820,6 +821,15 @@ $ dd if=/dev/zero of=1G.txt bs=1M count=1000
 
 Git - Reference  
 https://git-scm.com/docs
+
+## `git checkout .`: ファイルの変更を commit せず取り消す
+
+Git - git-checkout Documentation
+https://git-scm.com/docs/git-checkout
+
+```bash
+$ git checkout .
+```
 
 ## `.gitignore` あれこれ
 
