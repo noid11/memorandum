@@ -58,6 +58,8 @@
     - [`seq 10 | xargs -t -P10 -n1 sh -c 'echo hoge'`: 並列にコマンドを実行したい](#seq-10--xargs--t--p10--n1-sh--c-echo-hoge-並列にコマンドを実行したい)
 - [`dd`: dataset definition](#dd-dataset-definition)
     - [ダミーファイルを作りたい](#ダミーファイルを作りたい)
+- [jq](#jq)
+    - [`jq length`: json 要素の数をカウントする](#jq-length-json-要素の数をカウントする)
 - [Git](#git)
     - [`git checkout .`: ファイルの変更を commit せず取り消す](#git-checkout--ファイルの変更を-commit-せず取り消す)
     - [`.gitignore` あれこれ](#gitignore-あれこれ)
@@ -815,6 +817,60 @@ Linux
 ```bash
 # 1GB のファイル作成
 $ dd if=/dev/zero of=1G.txt bs=1M count=1000
+```
+
+# jq
+
+jq  
+https://stedolan.github.io/jq/
+
+stedolan/jq: Command-line JSON processor  
+https://github.com/stedolan/jq
+
+## `jq length`: json 要素の数をカウントする
+
+jq Manual (development version)  
+https://stedolan.github.io/jq/manual/#Builtinoperatorsandfunctions
+
+> length
+> 
+> The builtin function length gets the length of various different types of value:
+> - The length of a string is the number of Unicode codepoints it contains (which will be the same as its JSON-encoded length in bytes if it’s pure ASCII).
+> - The length of an array is the number of elements.
+> - The length of an object is the number of key-value pairs.
+> - The length of null is zero.
+
+サンプル
+
+```bash
+JSON='{"Users":[{"name": "hoge"},{"name": "fuga"},{"name": "bar"}]}'
+echo $JSON | jq
+echo $JSON | jq length  
+echo $JSON | jq '.Users | length'
+```
+
+実行例
+
+```bash
+$ JSON='{"Users":[{"name": "hoge"},{"name": "fuga"},{"name": "bar"}]}'
+$ echo $JSON | jq
+{
+  "Users": [
+    {
+      "name": "hoge"
+    },
+    {
+      "name": "fuga"
+    },
+    {
+      "name": "bar"
+    }
+  ]
+}
+$ echo $JSON | jq length  
+1
+$ echo $JSON | jq '.Users | length'
+3
 ```
 
 # Git
