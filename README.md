@@ -77,6 +77,7 @@
     - [`aws configure --profile hoge`: profile 追加](#aws-configure---profile-hoge-profile-追加)
     - [AWS CLI で IAM Role のクレデンシャルを使う](#aws-cli-で-iam-role-のクレデンシャルを使う)
     - [Pinpoint](#pinpoint)
+        - [`put-events`: イベント送信](#put-events-イベント送信)
         - [`phone-number-validate`: 電話番号の検証](#phone-number-validate-電話番号の検証)
         - [`update-endpoint`: エンドポイントの登録、更新](#update-endpoint-エンドポイントの登録更新)
         - [`get-entpoid`: エンドポイント取得](#get-entpoid-エンドポイント取得)
@@ -1092,6 +1093,45 @@ aws ec2 describe-regions --profile roleprofile
 
 pinpoint — AWS CLI 1.16.246 Command Reference  
 https://docs.aws.amazon.com/cli/latest/reference/pinpoint/index.html
+
+### `put-events`: イベント送信
+
+put-events — AWS CLI 1.16.266 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/pinpoint/put-events.html
+
+```bash
+REGION=us-east-1
+APPLICATION_ID=xxx
+ADDRESS=sampleuser@example.com
+USER_ID=sampleuser
+TIMESTAMP=$(date -u +%FT%TZ)
+JSON_FILENAME=$(uuidgen).json
+cat << EOS > $JSON_FILENAME
+{
+    "ApplicationId": "${APPLICATION_ID}",
+    "EventsRequest": {
+        "BatchItem": {
+            "MyItem": {
+                "Endpoint": {
+                    "Address": "${ADDRESS}",
+                    "ChannelType": "EMAIL",
+                    "User": {
+                        "UserId": "${USER_ID}"
+                    }
+                },
+                "Events": {
+                    "MyEvents": {
+                        "EventType": "MyEventType",
+                        "Timestamp": "${TIMESTAMP}"
+                    }
+                }
+            }
+        }
+    }
+}
+EOS
+aws --region $REGION pinpoint put-events --cli-input-json file://./$JSON_FILENAME
+```
 
 ### `phone-number-validate`: 電話番号の検証
 
