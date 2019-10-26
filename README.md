@@ -103,8 +103,8 @@
         - [`describe-stacks`: スタック情報取得](#describe-stacks-スタック情報取得)
         - [`delete-stack`: スタック削除。](#delete-stack-スタック削除)
     - [Cognito User Pool](#cognito-user-pool)
-        - [ADMINNOSRPAUTH による認証](#adminnosrpauth-による認証)
-        - [USERPASSWORDAUTH による認証](#userpasswordauth-による認証)
+        - [ADMIN NO SRP AUTH による認証](#admin-no-srp-auth-による認証)
+        - [USER PASSWORD AUTH による認証](#user-password-auth-による認証)
     - [Cognito ID Pool](#cognito-id-pool)
         - [Enhanced Flow](#enhanced-flow)
             - [UnAuth](#unauth)
@@ -1434,7 +1434,7 @@ https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-attribu
 
 ## Cognito User Pool
 
-### ADMIN_NO_SRP_AUTH による認証
+### ADMIN NO SRP AUTH による認証
 
 admin-initiate-auth — AWS CLI 1.16.266 Command Reference  
 https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/admin-initiate-auth.html
@@ -1448,7 +1448,7 @@ AUTH_FLOW=ADMIN_NO_SRP_AUTH
 aws cognito-idp admin-initiate-auth --user-pool-id $USER_POOL_ID --client-id $CLIENT_ID --auth-flow $AUTH_FLOW --auth-parameters USERNAME=$USERNAME,PASSWORD=$PASSWORD
 ```
 
-### USER_PASSWORD_AUTH による認証
+### USER PASSWORD AUTH による認証
 
 initiate-auth — AWS CLI 1.16.266 Command Reference  
 https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/initiate-auth.html
