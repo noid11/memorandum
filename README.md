@@ -76,6 +76,10 @@
 - [AWS CLI](#aws-cli)
     - [`aws configure --profile hoge`: profile 追加](#aws-configure---profile-hoge-profile-追加)
     - [AWS CLI で IAM Role のクレデンシャルを使う](#aws-cli-で-iam-role-のクレデンシャルを使う)
+    - [parameter を json で良い感じに入力する方法](#parameter-を-json-で良い感じに入力する方法)
+        - [`--generate-cli-skeleton` で json のフォーマットを確認](#--generate-cli-skeleton-で-json-のフォーマットを確認)
+        - [ヒアドキュメントで json を生成](#ヒアドキュメントで-json-を生成)
+        - [コマンドを実行](#コマンドを実行)
     - [Pinpoint](#pinpoint)
         - [`put-events`: イベント送信](#put-events-イベント送信)
         - [`phone-number-validate`: 電話番号の検証](#phone-number-validate-電話番号の検証)
@@ -1087,6 +1091,66 @@ credential_source = assume role 元の profile name
 
 ```bash
 aws ec2 describe-regions --profile roleprofile
+```
+
+## parameter を json で良い感じに入力する方法
+
+describe-regions — AWS CLI 1.16.266 Command Reference
+https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-regions.html
+
+describe-regions を例に。
+
+### `--generate-cli-skeleton` で json のフォーマットを確認
+
+必須ではないパラメーターはよしなに削る
+
+```bash
+$ aws ec2 describe-regions --generate-cli-skeleton
+{
+    "Filters": [
+        {
+            "Name": "",
+            "Values": [
+                ""
+            ]
+        }
+    ],
+    "RegionNames": [
+        ""
+    ],
+    "DryRun": true,
+    "AllRegions": true
+}
+```
+
+### ヒアドキュメントで json を生成
+
+シェル変数をよしなに使う
+
+```bash
+JSON_FILENAME=parameter.json
+FILTER_ENDPOINT=endpoint
+FILTER_ENDPOINT_VALUES='*us*'
+cat << EOS > $JSON_FILENAME
+{
+    "Filters": [
+        {
+            "Name": "${FILTER_ENDPOINT}",
+            "Values": [
+                "${FILTER_ENDPOINT_VALUES}"
+            ]
+        }
+    ]
+}
+EOS
+
+```
+
+### コマンドを実行
+
+```bash
+$ aws ec2 describe-regions --cli-input-json file://./$JSON_FILENAME
+$ rm $JSON_FILENAME
 ```
 
 ## Pinpoint
