@@ -102,6 +102,13 @@
         - [`describe-stack-resources`: スタックのリソース取得](#describe-stack-resources-スタックのリソース取得)
         - [`describe-stacks`: スタック情報取得](#describe-stacks-スタック情報取得)
         - [`delete-stack`: スタック削除。](#delete-stack-スタック削除)
+    - [Cognito User Pool](#cognito-user-pool)
+        - [ADMINNOSRPAUTH による認証](#adminnosrpauth-による認証)
+        - [USERPASSWORDAUTH による認証](#userpasswordauth-による認証)
+    - [Cognito ID Pool](#cognito-id-pool)
+        - [Enhanced Flow](#enhanced-flow)
+            - [UnAuth](#unauth)
+            - [Auth](#auth)
 - [AWS Chalice](#aws-chalice)
 - [ランダム文字列生成](#ランダム文字列生成)
 - [pandoc を使って markdown を XWiki 記法に変換](#pandoc-を使って-markdown-を-xwiki-記法に変換)
@@ -1424,6 +1431,84 @@ https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack.htm
 
 DeletionPolicy 属性 - AWS CloudFormation
 https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html
+
+## Cognito User Pool
+
+### ADMIN_NO_SRP_AUTH による認証
+
+admin-initiate-auth — AWS CLI 1.16.266 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/admin-initiate-auth.html
+
+```bash
+USER_POOL_ID=xxx
+CLIENT_ID=xxx
+USERNAME=sampleuser
+PASSWORD=mypassword
+AUTH_FLOW=ADMIN_NO_SRP_AUTH
+aws cognito-idp admin-initiate-auth --user-pool-id $USER_POOL_ID --client-id $CLIENT_ID --auth-flow $AUTH_FLOW --auth-parameters USERNAME=$USERNAME,PASSWORD=$PASSWORD
+```
+
+### USER_PASSWORD_AUTH による認証
+
+initiate-auth — AWS CLI 1.16.266 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/initiate-auth.html
+
+```bash
+AUTH_FLOW=USER_PASSWORD_AUTH
+USERNAME=sampleuser
+PASSWORD=mypassword
+CLIENT_ID=xxx
+aws cognito-idp initiate-auth --auth-flow $AUTH_FLOW --auth-parameters USERNAME=$USERNAME,PASSWORD=$PASSWORD --client-id $CLIENT_ID
+```
+
+## Cognito ID Pool
+
+### Enhanced Flow
+
+#### UnAuth
+
+```bash
+ID_POOL_ID=xxx
+IDENTITY_ID=$(aws cognito-identity get-id --identity-pool-id $ID_POOL_ID --output text)
+aws cognito-identity get-credentials-for-identity --identity-id $IDENTITY_ID
+
+export AWS_ACCESS_KEY_ID=xxx
+export AWS_SECRET_ACCESS_KEY=xxx
+export AWS_SESSION_TOKEN=xxx
+
+aws sts get-caller-identity
+
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+```
+
+#### Auth
+
+```bash
+REGION=ap-northeast-1
+USER_POOL_ID=ap-northeast-1_xxx
+CLIENT_ID=xxx
+USERNAME=sampleuser
+PASSWORD=mypassword
+AUTH_FLOW=ADMIN_NO_SRP_AUTH
+ID_TOKEN=$(aws cognito-idp admin-initiate-auth --user-pool-id $USER_POOL_ID --client-id $CLIENT_ID --auth-flow $AUTH_FLOW --auth-parameters USERNAME=$USERNAME,PASSWORD=$PASSWORD --query AuthenticationResult.IdToken --output text)
+
+ID_POOL_ID=xxx
+IDENTITY_ID=$(aws cognito-identity get-id --identity-pool-id $ID_POOL_ID --logins cognito-idp.$REGION.amazonaws.com/$USER_POOL_ID=$ID_TOKEN --output text)
+
+aws cognito-identity get-credentials-for-identity --identity-id $IDENTITY_ID --logins cognito-idp.$REGION.amazonaws.com/$USER_POOL_ID=$ID_TOKEN
+
+export AWS_ACCESS_KEY_ID=xxx
+export AWS_SECRET_ACCESS_KEY=xxx
+export AWS_SESSION_TOKEN=xxx
+
+aws sts get-caller-identity
+
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+```
 
 # AWS Chalice
 
