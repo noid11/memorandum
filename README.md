@@ -678,6 +678,14 @@ https://linuxjm.osdn.jp/html/e2fsprogs/man1/uuidgen.1.html
 ```bash
 $ uuidgen
 E71163D4-6570-4A9A-984D-9EC5B708F682
+
+# 小文字で出力
+$ tr '[A-Z]' '[a-z]' <<<$(uuidgen)
+a272224a-5e5f-43bc-978c-4bdfc0ded246
+
+# 大文字で出力
+$ tr '[a-z]' '[A-Z' <<<$(uuidgen)
+A272224A-5E5F-43BC-978C-4BDFC0DED246
 ```
 
 # `cut`: 受け取った文字列を分割して扱いたい
