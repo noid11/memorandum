@@ -46,6 +46,7 @@
 - [`wc`](#wc)
     - [`echo -e '1\n2\n3' | wc -l`: 行数をカウントしたい](#echo--e-1\n2\n3--wc--l-行数をカウントしたい)
     - [`pbpaste | wc -w`: クリップボードにコピーした文字列の長さを知りたい](#pbpaste--wc--w-クリップボードにコピーした文字列の長さを知りたい)
+- [`uuidgen`: UUID を生成](#uuidgen-uuid-を生成)
 - [`cut`: 受け取った文字列を分割して扱いたい](#cut-受け取った文字列を分割して扱いたい)
 - [圧縮, 展開](#圧縮-展開)
     - [zip](#zip)
@@ -664,6 +665,19 @@ pbpaste | wc -m
 # -c だとバイト数として 3 を返す
 pbpaste | wc -c
        9
+```
+
+# `uuidgen`: UUID を生成
+
+uuidgen  
+https://www.freebsd.org/cgi/man.cgi?query=uuidgen
+
+Man page of UUIDGEN  
+https://linuxjm.osdn.jp/html/e2fsprogs/man1/uuidgen.1.html
+
+```bash
+$ uuidgen
+E71163D4-6570-4A9A-984D-9EC5B708F682
 ```
 
 # `cut`: 受け取った文字列を分割して扱いたい
