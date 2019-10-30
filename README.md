@@ -91,6 +91,8 @@
         - [`run-task`: タスク実行](#run-task-タスク実行)
             - [Fargage](#fargage)
             - [EC2](#ec2)
+    - [Secrets Manager](#secrets-manager)
+        - [`get-random-password`: ランダムパスワード生成](#get-random-password-ランダムパスワード生成)
     - [Systems Manager](#systems-manager)
         - [`put-parameter`: パラメーターストアに値を登録、更新](#put-parameter-パラメーターストアに値を登録更新)
         - [`get-parameter`: パラメーターストアの値を取得](#get-parameter-パラメーターストアの値を取得)
@@ -1316,6 +1318,24 @@ CONTAINER_NAME=container-name
 COMMAND="[\"echo\", \"hoge\"]"
 
 aws ecs run-task --cluster $CLUSTER_NAME --task-definition $TASK_DEFINITION --overrides "{\"containerOverrides\":[{\"name\":\"$CONTAINER_NAME\",\"command\":$COMMAND}]}"' --count 1
+```
+
+## Secrets Manager
+
+### `get-random-password`: ランダムパスワード生成
+
+get-random-password — AWS CLI 1.16.268 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/secretsmanager/get-random-password.html
+
+```bash
+aws secretsmanager get-random-password
+
+# test 抽出
+aws secretsmanager get-random-password --output text
+PASSWORD=$(aws secretsmanager get-random-password --output text)
+
+# パスワードの長さ指定したりできる
+aws secretsmanager get-random-password --password-length 6
 ```
 
 ## Systems Manager
