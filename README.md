@@ -57,6 +57,7 @@
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
     - [`seq 10 | xargs -t -P10 -n1 sh -c 'echo hoge'`: 並列にコマンドを実行したい](#seq-10--xargs--t--p10--n1-sh--c-echo-hoge-並列にコマンドを実行したい)
+    - [`time`: コマンドにかかる時間を計測したい](#time-コマンドにかかる時間を計測したい)
 - [`dd`: dataset definition](#dd-dataset-definition)
     - [ダミーファイルを作りたい](#ダミーファイルを作りたい)
 - [jq](#jq)
@@ -821,6 +822,30 @@ https://linuxjm.osdn.jp/html/GNU_findutils/man1/xargs.1.html
 
 GNU Parallel - GNU Project - Free Software Foundation  
 https://www.gnu.org/software/parallel/
+
+## `time`: コマンドにかかる時間を計測したい
+
+Man page of TIME  
+https://linuxjm.osdn.jp/html/LDP_man-pages/man1/time.1.html
+
+time  
+https://www.freebsd.org/cgi/man.cgi?query=time
+
+```bash
+$ time echo hoge
+hoge
+
+real    0m0.001s
+user    0m0.000s
+sys     0m0.000s
+
+$ time sleep 1s; echo hoge
+
+real    0m1.156s
+user    0m0.001s
+sys     0m0.014s
+hoge
+```
 
 # `dd`: dataset definition
 
