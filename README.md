@@ -72,6 +72,7 @@
     - [ローカルでトピックブランチ作ってマージして消す](#ローカルでトピックブランチ作ってマージして消す)
     - [`git commit --amend -m 'fix message'`: 直前の commit メッセージ変更](#git-commit---amend--m-fix-message-直前の-commit-メッセージ変更)
     - [直前の commit 取り消し](#直前の-commit-取り消し)
+    - [`git reset .`: `git add` の取り消し](#git-reset--git-add-の取り消し)
     - [ファイルやディレクトリのリネーム](#ファイルやディレクトリのリネーム)
     - [プライベートな GitHub アカウントで使ってる Git ユーザーを設定する](#プライベートな-github-アカウントで使ってる-git-ユーザーを設定する)
 - [AWS CLI](#aws-cli)
@@ -1070,6 +1071,15 @@ git reset --soft HEAD^
 ```
 
 Git - git-reset Documentation
+https://git-scm.com/docs/git-reset
+
+## `git reset .`: `git add` の取り消し
+
+```bash
+git reset .
+```
+
+Git - git-reset Documentation  
 https://git-scm.com/docs/git-reset
 
 ## ファイルやディレクトリのリネーム
