@@ -566,10 +566,11 @@ docker rm some-nginx
 ## MySQL をサクッと動かす
 
 ```bash
-docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
-docker exec -it some-mysql mysql -u root -p
-docker stop some-mysql
-docker rm some-mysql
+MYSQL_PASSWORD=my-secret-pw
+CONTAINER_NAME=my-mysql-container
+# MySQL が Ready するまで多少時間がかかるため sleep している
+docker run --name $CONTAINER_NAME -e MYSQL_ROOT_PASSWORD=$MYSQL_PASSWORD -d mysql:latest; sleep 30s; docker exec -it $CONTAINER_NAME mysql -u root -p$MYSQL_PASSWORD
+docker stop $CONTAINER_NAME; docker rm $CONTAINER_NAME
 ```
 
 mysql - Docker Hub
