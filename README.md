@@ -162,6 +162,7 @@
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [JSON を diff できるサイト](#json-を-diff-できるサイト)
     - [プログラミング言語やフレームワークやツールのリファレンスまとめサイト](#プログラミング言語やフレームワークやツールのリファレンスまとめサイト)
     - [OAuth 2.0, OpenID Connect の技術情報](#oauth-20-openid-connect-の技術情報)
     - [ランダムな JWK (JSON Web Key) を生成できるサイト](#ランダムな-jwk-json-web-key-を生成できるサイト)
@@ -2029,6 +2030,11 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 >     ただしOSによっては0.0.0.0を127.0.0.1にルーティングしていることがあるため表面上は問題ないように見える(CORSには引っかかるので混同していると痛い目見るかも)  
 
 # 便利な Web サイト
+
+## JSON を diff できるサイト
+
+JsonDiffPatch  
+https://benjamine.github.io/jsondiffpatch/demo/index.html
 
 ## プログラミング言語やフレームワークやツールのリファレンスまとめサイト
 
