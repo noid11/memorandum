@@ -61,6 +61,7 @@
 - [`dd`: dataset definition](#dd-dataset-definition)
     - [ダミーファイルを作りたい](#ダミーファイルを作りたい)
 - [jq](#jq)
+    - [`jq fromjson`: エスケープされた json を整形する](#jq-fromjson-エスケープされた-json-を整形する)
     - [`jq length`: json 要素の数をカウントする](#jq-length-json-要素の数をカウントする)
 - [Git](#git)
     - [`git checkout .`: ファイルの変更を commit せず取り消す](#git-checkout--ファイルの変更を-commit-せず取り消す)
@@ -889,6 +890,42 @@ https://stedolan.github.io/jq/
 
 stedolan/jq: Command-line JSON processor  
 https://github.com/stedolan/jq
+
+## `jq fromjson`: エスケープされた json を整形する
+
+jq Manual (development version)
+https://stedolan.github.io/jq/manual/#Builtinoperatorsandfunctions
+
+> Convert to/from JSON
+> 
+> The `tojson` and `fromjson` builtins dump values as JSON texts or parse JSON texts into values, respectively.  
+> The tojson builtin differs from tostring in that tostring returns strings unmodified, while tojson encodes strings as JSON strings.
+
+サンプル
+
+```bash
+$ cat << EOS | pbcopy
+{
+  "a" : 1,
+  "b" : 2,
+  "c" : "{\"id\":\"hoge\",\"parent\":\"abc\"}\n"
+}
+EOS
+
+$ pbpaste | jq .
+{
+  "a": 1,
+  "b": 2,
+  "c": "{\"id\":\"hoge\",\"parent\":\"abc\"}\n"
+}
+$ pbpaste | jq '.c'
+"{\"id\":\"hoge\",\"parent\":\"abc\"}\n"
+$ pbpaste | jq '.c | fromjson'
+{
+  "id": "hoge",
+  "parent": "abc"
+}
+```
 
 ## `jq length`: json 要素の数をカウントする
 
