@@ -94,6 +94,10 @@
             - [EC2](#ec2)
     - [Secrets Manager](#secrets-manager)
         - [`get-random-password`: ランダムパスワード生成](#get-random-password-ランダムパスワード生成)
+    - [SQS](#sqs)
+        - [`send-message`: キューにメッセージ送信](#send-message-キューにメッセージ送信)
+        - [`receive-message`: キューからメッセージ受信](#receive-message-キューからメッセージ受信)
+        - [`delete-message`: メッセージ削除](#delete-message-メッセージ削除)
     - [Systems Manager](#systems-manager)
         - [`put-parameter`: パラメーターストアに値を登録、更新](#put-parameter-パラメーターストアに値を登録更新)
         - [`get-parameter`: パラメーターストアの値を取得](#get-parameter-パラメーターストアの値を取得)
@@ -1376,6 +1380,42 @@ PASSWORD=$(aws secretsmanager get-random-password --output text)
 # パスワードの長さ指定したりできる
 aws secretsmanager get-random-password --password-length 6
 ```
+
+## SQS
+
+### `send-message`: キューにメッセージ送信
+
+```bash
+QUEUE_URL=xxx
+aws sqs send-message --queue-url $QUEUE_URL --message-body hoge
+```
+
+send-message — AWS CLI 1.16.277 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/sqs/send-message.html
+
+
+### `receive-message`: キューからメッセージ受信
+
+```bash
+QUEUE_URL=xxx
+aws sqs receive-message --queue-url $QUEUE_URL
+```
+
+receive-message — AWS CLI 1.16.277 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/sqs/receive-message.html
+
+### `delete-message`: メッセージ削除
+
+```bash
+QUEUE_URL=xxx
+aws sqs receive-message --queue-url $QUEUE_URL
+
+RECEIPT_HANDLE=yyy
+aws sqs delete-message --queue-url $QUEUE_URL --receipt-handle $RECEIPT_HANDLE
+```
+
+delete-message — AWS CLI 1.16.277 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/sqs/delete-message.html
 
 ## Systems Manager
 
