@@ -61,6 +61,7 @@
 - [`dd`: dataset definition](#dd-dataset-definition)
     - [ダミーファイルを作りたい](#ダミーファイルを作りたい)
 - [jq](#jq)
+    - [`jq -r '.hoge'`: 抽出した文字列からダブルクオートを取り除く](#jq--r-hoge-抽出した文字列からダブルクオートを取り除く)
     - [`jq fromjson`: エスケープされた json を整形する](#jq-fromjson-エスケープされた-json-を整形する)
     - [`jq length`: json 要素の数をカウントする](#jq-length-json-要素の数をカウントする)
 - [Git](#git)
@@ -895,6 +896,48 @@ https://stedolan.github.io/jq/
 
 stedolan/jq: Command-line JSON processor  
 https://github.com/stedolan/jq
+
+## `jq -r '.hoge'`: 抽出した文字列からダブルクオートを取り除く
+
+jq Manual (development version)
+https://stedolan.github.io/jq/manual/#Invokingjq
+
+> --raw-output / -r:
+> 
+> With this option, if the filter’s result is a string then it will be written directly to standard output rather than being formatted as a JSON string with quotes. This can be useful for making jq filters talk to non-JSON-based systems.
+
+サンプル
+
+```bash
+JSON='{"Users":[{"name": "hoge"},{"name": "fuga"},{"name": "bar"}]}'
+echo $JSON | jq
+echo $JSON | jq '.Users[0].name'
+echo $JSON | jq -r '.Users[0].name'
+```
+
+実行例
+
+```bash
+$ JSON='{"Users":[{"name": "hoge"},{"name": "fuga"},{"name": "bar"}]}'
+$ echo $JSON | jq
+{
+  "Users": [
+    {
+      "name": "hoge"
+    },
+    {
+      "name": "fuga"
+    },
+    {
+      "name": "bar"
+    }
+  ]
+}
+$ echo $JSON | jq '.Users[0].name'
+"hoge"
+$ echo $JSON | jq -r '.Users[0].name'
+hoge
+```
 
 ## `jq fromjson`: エスケープされた json を整形する
 
