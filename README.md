@@ -84,6 +84,11 @@
         - [`--generate-cli-skeleton` で json のフォーマットを確認](#--generate-cli-skeleton-で-json-のフォーマットを確認)
         - [ヒアドキュメントで json を生成](#ヒアドキュメントで-json-を生成)
         - [コマンドを実行](#コマンドを実行)
+    - [Comprehend](#comprehend)
+        - [`detect-dominant-language`: 言語検出](#detect-dominant-language-言語検出)
+        - [`detect-entities`: エンティティ検出](#detect-entities-エンティティ検出)
+        - [`detect-sentiment`: 感情分析](#detect-sentiment-感情分析)
+        - [`detect-key-phrases`: キーフレーズ検出](#detect-key-phrases-キーフレーズ検出)
     - [Pinpoint](#pinpoint)
         - [`put-events`: イベント送信](#put-events-イベント送信)
         - [`phone-number-validate`: 電話番号の検証](#phone-number-validate-電話番号の検証)
@@ -1281,6 +1286,41 @@ EOS
 ```bash
 $ aws ec2 describe-regions --cli-input-json file://./$JSON_FILENAME
 $ rm $JSON_FILENAME
+```
+
+## Comprehend
+
+### `detect-dominant-language`: 言語検出
+
+detect-dominant-language — AWS CLI 1.16.281 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/comprehend/detect-dominant-language.html
+
+```bash
+aws --region us-east-1 comprehend detect-dominant-language --text "こんにちは"
+```
+
+### `detect-entities`: エンティティ検出
+
+detect-entities — AWS CLI 1.16.281 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/comprehend/detect-entities.html
+
+```bash
+aws --region us-east-1 comprehend detect-entities --language-code ja --text "Amazon Comprehend は機械学習を使用して、構造化されていないデータのインサイトと関係を明らかにします。このサービスは、テキストの言語を識別し、キーフレーズ、場所、人物、ブランド、またはイベントを抽出し、テキストがどの程度肯定的か否定的かを理解し、トークン分割や品詞を使用してテキストを分析し、テキストファイルのコレクションをトピックごとに自動的に整理します。Amazon Comprehend の AutoML 機能を使用して、組織のニーズに合わせて独自にカスタマイズされたエンティティまたはテキスト分類モデルのカスタムセットを構築することもできます。"
+```
+
+### `detect-sentiment`: 感情分析
+
+detect-sentiment — AWS CLI 1.16.281 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/comprehend/detect-sentiment.html
+
+```bash
+aws --region us-east-1 comprehend detect-sentiment --language-code ja --text "こんにちは"
+```
+
+### `detect-key-phrases`: キーフレーズ検出
+
+```bash
+aws --region us-east-1 comprehend detect-key-phrases --language-code ja --text "Amazon Comprehend は機械学習を使用して、構造化されていないデータのインサイトと関係を明らかにします。このサービスは、テキストの言語を識別し、キーフレーズ、場所、人物、ブランド、またはイベントを抽出し、テキストがどの程度肯定的か否定的かを理解し、トークン分割や品詞を使用してテキストを分析し、テキストファイルのコレクションをトピックごとに自動的に整理します。Amazon Comprehend の AutoML 機能を使用して、組織のニーズに合わせて独自にカスタマイズされたエンティティまたはテキスト分類モデルのカスタムセットを構築することもできます。"
 ```
 
 ## Pinpoint
