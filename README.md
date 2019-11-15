@@ -22,6 +22,8 @@
         - [Markdown TOC: 日本語使っててもいい感じに TOC を作ってくれる](#markdown-toc-日本語使っててもいい感じに-toc-を作ってくれる)
     - [ショートカット](#ショートカット)
         - [一覧](#一覧)
+        - [`Command + B`: サイドバー表示をトグル](#command--b-サイドバー表示をトグル)
+        - [``control + ` ``: Terminal 表示をトグル](#control----terminal-表示をトグル)
         - [`Command + Shift + P`: コマンドパレット](#command--shift--p-コマンドパレット)
         - [`Command + P`: 名前を入力して任意のファイルかシンボルに移動](#command--p-名前を入力して任意のファイルかシンボルに移動)
         - [`control + Tab`: タブ切り替え](#control--tab-タブ切り替え)
@@ -467,6 +469,10 @@ https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-re
 
 keyboard-shortcuts-macos.pdf
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+
+### `Command + B`: サイドバー表示をトグル
+
+### ``control + ` ``: Terminal 表示をトグル
 
 ### `Command + Shift + P`: コマンドパレット
 
