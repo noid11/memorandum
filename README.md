@@ -1477,6 +1477,10 @@ aws secretsmanager get-random-password --password-length 6
 ```bash
 QUEUE_URL=xxx
 aws sqs send-message --queue-url $QUEUE_URL --message-body hoge
+
+# FIFO Queue
+MESSAGE_GROUP_ID=mygroupid
+aws sqs send-message --queue-url $QUEUE_URL --message-group-id $MESSAGE_GROUP_ID --message-body hoge
 ```
 
 send-message — AWS CLI 1.16.277 Command Reference  
@@ -1487,7 +1491,7 @@ https://docs.aws.amazon.com/cli/latest/reference/sqs/send-message.html
 
 ```bash
 QUEUE_URL=xxx
-aws sqs receive-message --queue-url $QUEUE_URL
+aws sqs receive-message --queue-url $QUEUE_URL --attribute-names All
 ```
 
 receive-message — AWS CLI 1.16.277 Command Reference  
