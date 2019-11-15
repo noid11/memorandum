@@ -154,6 +154,8 @@
         - [JST](#jst)
         - [UTC](#utc)
     - [参考](#参考)
+- [`ls`](#ls)
+    - [`ls -1`: ファイル名のみ1列でリスト](#ls--1-ファイル名のみ1列でリスト)
 - [XML を jq 的に整形したい](#xml-を-jq-的に整形したい)
     - [参考](#参考)
 - [環境変数一覧を表示したい](#環境変数一覧を表示したい)
@@ -1975,6 +1977,20 @@ https://ss64.com/osx/date.html
 
 date(1): print/set system date/time - Linux man page
 https://linux.die.net/man/1/date
+
+# `ls`
+
+Man page of LS  
+https://linuxjm.osdn.jp/html/gnumaniak/man1/ls.1.html
+
+ls  
+https://www.freebsd.org/cgi/man.cgi?ls
+
+## `ls -1`: ファイル名のみ1列でリスト
+
+```bash
+ls -1
+```
 
 # XML を jq 的に整形したい
 
