@@ -142,10 +142,10 @@
     - [ポート状況の確認](#ポート状況の確認)
     - [参考](#参考)
 - [`openssl`](#openssl)
+    - [`openssl dgst -sha256`: SHA 256 でメッセージダイジェスト出力](#openssl-dgst--sha256-sha-256-でメッセージダイジェスト出力)
     - [サーバーに設定されている証明書の確認](#サーバーに設定されている証明書の確認)
         - [SNI](#sni)
     - [HTTP リクエスト](#http-リクエスト)
-    - [参考](#参考)
 - [`date`](#date)
     - [unixtime を JST に変換](#unixtime-を-jst-に変換)
     - [unixtime を UTC に変換](#unixtime-を-utc-に変換)
@@ -1889,6 +1889,26 @@ https://qiita.com/hijili/items/63a7ed4885974810e036
 
 # `openssl`
 
+/docs/manmaster/man1/index.html  
+https://www.openssl.org/docs/manmaster/man1/
+
+
+## `openssl dgst -sha256`: SHA 256 でメッセージダイジェスト出力
+
+/docs/man1.0.2/man1/openssl-dgst.html  
+https://www.openssl.org/docs/man1.0.2/man1/openssl-dgst.html
+
+```bash
+echo "hoge" | openssl dgst -sha256
+```
+
+実行例
+
+```bash
+$ echo "hoge" | openssl dgst -sha256
+(stdin)= 2e0390eb024a52963db7b95e84a9c2b12c004054a7bad9a97ec0c7c89d4681d2
+```
+
 ## サーバーに設定されている証明書の確認
 
 ```bash
@@ -1910,11 +1930,6 @@ GET / HTTP/1.1
 Host:example.com
 # ENTER
 ```
-
-## 参考
-
-/docs/man1.0.2/apps/openssl.html
-https://www.openssl.org/docs/man1.0.2/apps/openssl.html
 
 opensslでサーバ証明書を取得するワンライナー - Qiita
 https://qiita.com/RadicalFunction/items/e2f97306778281bacafc
