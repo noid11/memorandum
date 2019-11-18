@@ -1307,7 +1307,14 @@ https://docs.aws.amazon.com/cli/latest/reference/lambda/invoke.html
 
 ```bash
 FUNCTION_NAME=myfunction
+
+# base64 command
 aws lambda invoke --function-name $FUNCTION_NAME --payload '{ "name": "Bob" }' --log-type Tail outfile --query 'LogResult' --output text | base64 -D
+
+# openssl command
+aws lambda invoke --function-name $FUNCTION_NAME --payload '{ "name": "Bob" }' --log-type Tail outfile --query 'LogResult' --output text | openssl base64 -d
+
+# remove event outfile
 rm outfile
 ```
 
