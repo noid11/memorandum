@@ -86,6 +86,8 @@
         - [`--generate-cli-skeleton` で json のフォーマットを確認](#--generate-cli-skeleton-で-json-のフォーマットを確認)
         - [ヒアドキュメントで json を生成](#ヒアドキュメントで-json-を生成)
         - [コマンドを実行](#コマンドを実行)
+    - [Lambda](#lambda)
+        - [`invoke`: Lambda 関数の起動](#invoke-lambda-関数の起動)
     - [Comprehend](#comprehend)
         - [`detect-dominant-language`: 言語検出](#detect-dominant-language-言語検出)
         - [`detect-entities`: エンティティ検出](#detect-entities-エンティティ検出)
@@ -1294,6 +1296,19 @@ EOS
 ```bash
 $ aws ec2 describe-regions --cli-input-json file://./$JSON_FILENAME
 $ rm $JSON_FILENAME
+```
+
+## Lambda
+
+### `invoke`: Lambda 関数の起動
+
+invoke — AWS CLI 1.16.283 Command Reference  
+https://docs.aws.amazon.com/cli/latest/reference/lambda/invoke.html
+
+```bash
+FUNCTION_NAME=myfunction
+aws lambda invoke --function-name $FUNCTION_NAME --payload '{ "name": "Bob" }' --log-type Tail outfile --query 'LogResult' --output text | base64 -D
+rm outfile
 ```
 
 ## Comprehend
