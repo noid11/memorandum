@@ -144,9 +144,9 @@
     - [ポート状況の確認](#ポート状況の確認)
     - [参考](#参考)
 - [`openssl`](#openssl)
+    - [X.509 仕様](#x509-仕様)
     - [`openssl dgst -sha256`: SHA 256 でメッセージダイジェスト出力](#openssl-dgst--sha256-sha-256-でメッセージダイジェスト出力)
     - [サーバーに設定されている証明書の確認](#サーバーに設定されている証明書の確認)
-        - [SNI](#sni)
     - [HTTP リクエスト](#http-リクエスト)
 - [`date`](#date)
     - [unixtime を JST に変換](#unixtime-を-jst-に変換)
@@ -1911,8 +1911,16 @@ https://qiita.com/hijili/items/63a7ed4885974810e036
 
 # `openssl`
 
-/docs/manmaster/man1/index.html  
-https://www.openssl.org/docs/manmaster/man1/
+/docs/man1.1.1/man1/index.html  
+https://www.openssl.org/docs/man1.1.1/man1/
+
+## X.509 仕様
+
+RFC 5280 - Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile  
+https://tools.ietf.org/html/rfc5280
+
+Internet X.509 PKI Certificate and Certificate Revocation List (CRL) Profile  
+https://www.ipa.go.jp/security/rfc/RFC5280-00JA.html
 
 
 ## `openssl dgst -sha256`: SHA 256 でメッセージダイジェスト出力
@@ -1934,13 +1942,23 @@ $ echo "hoge" | openssl dgst -sha256
 ## サーバーに設定されている証明書の確認
 
 ```bash
-echo "Q" | openssl s_client -connect www.example.com:443 -showcerts
-```
+DOMAIN=www.example.com
 
-### SNI
+echo "Q" | openssl s_client -connect $DOMAIN:443 -showcerts
 
-```bash
-echo "Q" | openssl s_client -connect www.example.com:443 -servername hoge.example.com -showcerts
+# SNI
+echo "Q" | openssl s_client -connect $DOMAIN:443 -servername hoge.example.com -showcerts
+
+# 証明書の有効期限を確認する
+# notBefore が有効期限の始まり。
+# notAfter が有効期限の終わり。
+echo "Q" | openssl s_client -connect $DOMAIN:443 | openssl x509 -noout -dates
+
+# シリアルナンバー確認
+echo "Q" | openssl s_client -connect $DOMAIN:443 | openssl x509 -noout -serial
+
+# SAN (Subject Alternative Names) 確認
+echo "Q" | openssl s_client -connect $DOMAIN:443 | openssl x509 -text | grep DNS
 ```
 
 ## HTTP リクエスト
