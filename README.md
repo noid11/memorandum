@@ -128,6 +128,7 @@
         - [Enhanced Flow](#enhanced-flow)
             - [UnAuth](#unauth)
             - [Auth](#auth)
+- [AWS SAM CLI](#aws-sam-cli)
 - [AWS Chalice](#aws-chalice)
 - [ランダム文字列生成](#ランダム文字列生成)
 - [pandoc を使って markdown を XWiki 記法に変換](#pandoc-を使って-markdown-を-xwiki-記法に変換)
@@ -1759,6 +1760,20 @@ aws sts get-caller-identity
 unset AWS_ACCESS_KEY_ID
 unset AWS_SECRET_ACCESS_KEY
 unset AWS_SESSION_TOKEN
+```
+
+# AWS SAM CLI
+
+AWS SAM CLI Command Reference - AWS Serverless Application Model  
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-command-reference.html
+
+```bash
+STACK_NAME=mystack
+S3_BUCKET=mybucket
+sam build
+sam package --output-template packaged.yaml --s3-bucket $S3_BUCKET
+sam deploy --template-file ./packaged.yaml --stack-name $STACK_NAME --capabilities CAPABILITY_IAM
+aws cloudformation delete-stack --stack-name $STACK_NAME
 ```
 
 # AWS Chalice
