@@ -7,6 +7,9 @@
 - [TOC](#toc)
 - [`javascript`](#javascript)
     - [JSON を pretty print したい](#json-を-pretty-print-したい)
+    - [AWS Lambda でエラーを発生させる](#aws-lambda-でエラーを発生させる)
+    - [例外を throw する](#例外を-throw-する)
+    - [sleep したい](#sleep-したい)
 - [`python`](#python)
     - [`python -m json.tool`: jq が無い環境で json を見やすく表示する](#python--m-jsontool-jq-が無い環境で-json-を見やすく表示する)
     - [`python -m http.server 8000`: http server をサクッと動かす](#python--m-httpserver-8000-http-server-をサクッと動かす)
@@ -295,6 +298,63 @@ undefined
 }
 undefined
 > .exit
+```
+
+## AWS Lambda でエラーを発生させる
+
+```js
+exports.handler = (event, context, callback) => {
+    callback("error");
+};
+```
+
+Node.js の AWS Lambda 関数ハンドラー - AWS Lambda
+https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/nodejs-prog-model-handler.html
+
+> 3 番目の引数 callback は、レスポンスを送信するために non-async 関数で呼び出すことができる関数です。コールバック関数は、Error とレスポンスの 2 つの引数を取ります。応答オブジェクトは、JSON.stringify と互換性がある必要があります。 
+
+Node.js での AWS Lambda Context オブジェクト - AWS Lambda
+https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/nodejs-prog-model-context.html
+
+> callbackWaitsForEmptyEventLoop – false に設定して、Node.js イベントループが空になるまで待機せずに、コールバックが実行されるとすぐにレスポンスを送信します。これが false の場合、未完了のイベントは、次の呼び出し中に実行され続けます。
+
+
+## 例外を throw する
+
+```js
+exports.handler = (event, context, callback) => {
+    throw true;
+};
+```
+
+throw - JavaScript | MDN
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/throw
+
+## sleep したい
+
+setTimeout 使うなら
+
+```js
+exports.handler = (event, context, callback) => {
+    setTimeout(function(){
+    }, 11000);
+};
+```
+
+async, await 使うなら
+
+```js
+function sleep(waitSec) {
+    return new Promise(function (resolve) {
+        setTimeout(function() { resolve() }, waitSec);
+    });
+};
+
+exports.handler = async (event, context, callback) => {
+    console.log(event);
+    await sleep(5000);
+    callback(null, "Hello, " + event.who + "!");
+};
 ```
 
 # `python`
