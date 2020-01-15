@@ -1682,6 +1682,10 @@ aws cloudformation deploy --template-file ./mytemplate.yaml --stack-name mystack
 
 # template で parameter 使う場合
 aws cloudformation deploy --template-file ./mytemplate.yaml --stack-name mystack --parameter-overrides MyParameter1st=hoge MyParameter2nd=fuga
+
+# template で IAM リソース場合
+aws cloudformation deploy --template-file ./mytemplate.yaml --stack-name mystack --capabilities CAPABILITY_IAM
+
 ```
 
 deploy — AWS CLI 1.16.171 Command Reference
