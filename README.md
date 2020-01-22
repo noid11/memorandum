@@ -137,6 +137,7 @@
 - [pandoc を使って markdown を XWiki 記法に変換](#pandoc-を使って-markdown-を-xwiki-記法に変換)
     - [参考](#参考)
 - [`curl`](#curl)
+    - [ファイルをアップロードしたい](#ファイルをアップロードしたい)
     - [通信の詳細を見たい](#通信の詳細を見たい)
     - [レスポンスされるステータスコードを見たい](#レスポンスされるステータスコードを見たい)
     - [POST したい](#post-したい)
@@ -1878,6 +1879,21 @@ Pandoc - Pandoc User’s Guide
 https://pandoc.org/MANUAL.html
 
 # `curl`
+
+## ファイルをアップロードしたい
+
+```bash
+FILENAME=DUMMY_IMAGE.png
+curl https://via.placeholder.com/150 -o $FILENAME
+ENDPOINT=https://example.com
+curl -X POST $ENDPOINT -F hoge=fuga -F foo=bar -F "file=@$FILENAME;type=image/png"
+```
+
+curl - How To Use  
+https://curl.haxx.se/docs/manpage.html#-o
+
+curl - How To Use  
+https://curl.haxx.se/docs/manpage.html#-F
 
 ## 通信の詳細を見たい
 
