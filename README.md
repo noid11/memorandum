@@ -186,6 +186,7 @@
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
     - [JSON を diff できるサイト](#json-を-diff-できるサイト)
+    - [JSON を良い感じに見れる Viewer](#json-を良い感じに見れる-viewer)
     - [プログラミング言語やフレームワークやツールのリファレンスまとめサイト](#プログラミング言語やフレームワークやツールのリファレンスまとめサイト)
     - [OAuth 2.0, OpenID Connect の技術情報](#oauth-20-openid-connect-の技術情報)
     - [ランダムな JWK (JSON Web Key) を生成できるサイト](#ランダムな-jwk-json-web-key-を生成できるサイト)
@@ -2363,6 +2364,13 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 
 JsonDiffPatch  
 https://benjamine.github.io/jsondiffpatch/demo/index.html
+
+## JSON を良い感じに見れる Viewer
+
+Online JSON Viewer  
+http://jsonviewer.stack.hu/
+
+デベロッパーツールをみた感じ JSON データを通信している感じもない
 
 ## プログラミング言語やフレームワークやツールのリファレンスまとめサイト
 
