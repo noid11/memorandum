@@ -163,6 +163,8 @@
     - [参考](#参考)
 - [`ls`](#ls)
     - [`ls -1`: ファイル名のみ1列でリスト](#ls--1-ファイル名のみ1列でリスト)
+- [`tree`](#tree)
+    - [`tree -I nodemodule`: 特定ディレクトリを省いて tree 表示したい](#tree--i-nodemodule-特定ディレクトリを省いて-tree-表示したい)
 - [XML を jq 的に整形したい](#xml-を-jq-的に整形したい)
     - [参考](#参考)
 - [環境変数一覧を表示したい](#環境変数一覧を表示したい)
@@ -2144,6 +2146,30 @@ https://www.freebsd.org/cgi/man.cgi?ls
 ```bash
 ls -1
 ```
+
+# `tree`
+
+tree(1) - Linux man page  
+https://linux.die.net/man/1/tree
+
+## `tree -I node_module`: 特定ディレクトリを省いて tree 表示したい
+
+
+例
+
+```bash
+# javascript なら
+tree -I node_module
+
+# golang なら
+tree -I vendor
+```
+
+tree(1) - Linux man page  
+https://linux.die.net/man/1/tree
+
+> -I pattern
+>     Do not list those files that match the wild-card pattern. 
 
 # XML を jq 的に整形したい
 
