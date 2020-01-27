@@ -59,6 +59,8 @@
         - [`zip -r archived.zip ./hogedir`: ディレクトリ圧縮](#zip--r-archivedzip-hogedir-ディレクトリ圧縮)
         - [`zipinfo archived.zip`: 圧縮ファイルの情報を見る](#zipinfo-archivedzip-圧縮ファイルの情報を見る)
     - [`unzip archived.zip`: 圧縮ファイルの展開](#unzip-archivedzip-圧縮ファイルの展開)
+    - [`gunzip`](#gunzip)
+        - [`gunzip -r mydirectory`: ディレクトリを指定して再帰的に圧縮ファイルを展開](#gunzip--r-mydirectory-ディレクトリを指定して再帰的に圧縮ファイルを展開)
 - [パフォーマンス系](#パフォーマンス系)
     - [CPU 使用率を上げたい](#cpu-使用率を上げたい)
     - [`seq 10 | xargs -t -P10 -n1 sh -c 'echo hoge'`: 並列にコマンドを実行したい](#seq-10--xargs--t--p10--n1-sh--c-echo-hoge-並列にコマンドを実行したい)
@@ -888,6 +890,32 @@ replace hoge.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
  extracting: hogedir/2.txt           
  extracting: hogedir/1.txt 
 ```
+
+## `gunzip`
+
+gunzip(1): compress/expand files - Linux man page  
+https://linux.die.net/man/1/gunzip
+
+gunzip  
+https://www.freebsd.org/cgi/man.cgi?query=gunzip
+
+### `gunzip -r mydirectory`: ディレクトリを指定して再帰的に圧縮ファイルを展開
+
+```bash
+unzip -r ./mydirectory
+```
+
+gunzip(1): compress/expand files - Linux man page  
+https://linux.die.net/man/1/gunzip
+
+> -r, --recursive  
+> This option is used to gzip the files in	a directory tree individually, using	the fts(3) library.
+
+gunzip  
+https://www.freebsd.org/cgi/man.cgi?query=gunzip
+
+> -r --recursive  
+> Travel the directory structure recursively. If any of the file names specified on the command line are directories, gzip will descend into the directory and compress all the files it finds there (or decompress them in the case of gunzip ). 
 
 # パフォーマンス系
 
