@@ -11,6 +11,7 @@
     - [例外を throw する](#例外を-throw-する)
     - [sleep したい](#sleep-したい)
 - [`python`](#python)
+    - [python のコンストラクタで setattr を使っていい感じにインスタンス変数を設定する方法](#python-のコンストラクタで-setattr-を使っていい感じにインスタンス変数を設定する方法)
     - [`python -m json.tool`: jq が無い環境で json を見やすく表示する](#python--m-jsontool-jq-が無い環境で-json-を見やすく表示する)
     - [`python -m http.server 8000`: http server をサクッと動かす](#python--m-httpserver-8000-http-server-をサクッと動かす)
 - [`npm`: Node Package Manager](#npm-node-package-manager)
@@ -367,6 +368,66 @@ exports.handler = async (event, context, callback) => {
 
 3.6.9 Documentation  
 https://docs.python.org/ja/3.6/
+
+## python のコンストラクタで setattr を使っていい感じにインスタンス変数を設定する方法
+
+こんな感じで取得できる API があったとして
+
+```bash
+% aws ec2 describe-regions --region-names ap-northeast-1
+{
+    "Regions": [
+        {
+            "Endpoint": "ec2.ap-northeast-1.amazonaws.com",
+            "RegionName": "ap-northeast-1",
+            "OptInStatus": "opt-in-not-required"
+        }
+    ]
+}
+```
+
+Region クラスを扱いたい場合・・・
+
+```py
+import boto3
+
+class Region:
+    def __init__(self,region):
+        region_info = region
+
+        # インスタンス生成時に dict を渡して key, value を setattr でインスタンス変数に設定する
+        for key, value in region_info.items():
+            setattr(self, str(key), value)
+
+client = boto3.client('ec2')
+response = client.describe_regions(RegionNames=['ap-northeast-1'])
+
+tokyo = Region(response['Regions'][0])
+print(vars(tokyo))
+```
+
+実行するとこんな感じ
+
+```bash
+% python script.py
+{'Endpoint': 'ec2.ap-northeast-1.amazonaws.com', 'RegionName': 'ap-northeast-1', 'OptInStatus': 'opt-in-not-required'}
+```
+
+API で取得した key, value をインスタンス変数として設定できた
+
+組み込み関数 — Python 3.8.2rc1 ドキュメント  
+https://docs.python.org/ja/3/library/functions.html#setattr
+
+> setattr(object, name, value)  
+> getattr() の相方です。引数はオブジェクト、文字列、それから任意の値です。文字列は既存の属性または新たな属性の名前にできます。この関数は指定したオブジェクトが許せば、値を属性に関連付けます。例えば、 setattr(x, 'foobar', 123) は x.foobar = 123 と等価です。
+
+組み込み関数 — Python 3.8.2rc1 ドキュメント  
+https://docs.python.org/ja/3/library/functions.html#vars
+
+> vars([object])  
+> モジュール、クラス、インスタンス、あるいはそれ以外の __dict__ 属性を持つオブジェクトの、 __dict__ 属性を返します。  
+> モジュールやインスタンスのようなオブジェクトは、更新可能な __dict__ 属性を持っています。ただし、それ以外のオブジェクトでは __dict__ 属性への書き込みが制限されている場合があります。書き込みに制限がある例としては、辞書を直接更新されることを防ぐために types.MappingProxyType を使っているクラスがあります。  
+> 引数がなければ、vars() は locals() のように振る舞います。ただし、辞書 locals への更新は無視されるため、辞書 locals は読み出し時のみ有用であることに注意してください。
 
 ## `python -m json.tool`: jq が無い環境で json を見やすく表示する
 
