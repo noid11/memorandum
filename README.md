@@ -14,6 +14,8 @@
     - [python のコンストラクタで setattr を使っていい感じにインスタンス変数を設定する方法](#python-のコンストラクタで-setattr-を使っていい感じにインスタンス変数を設定する方法)
     - [`python -m json.tool`: jq が無い環境で json を見やすく表示する](#python--m-jsontool-jq-が無い環境で-json-を見やすく表示する)
     - [`python -m http.server 8000`: http server をサクッと動かす](#python--m-httpserver-8000-http-server-をサクッと動かす)
+- [pip](#pip)
+    - [`pip install -r requirements.txt -t ./packages`: requirements.txt からローカルにパッケージをインストールする](#pip-install--r-requirementstxt--t-packages-requirementstxt-からローカルにパッケージをインストールする)
 - [`npm`: Node Package Manager](#npm-node-package-manager)
     - [`npm` cli](#npm-cli)
         - [`npm init`, `npm install package-name`: 初期セットアップ](#npm-init-npm-install-package-name-初期セットアップ)
@@ -498,6 +500,27 @@ https://docs.python.org/ja/3.6/library/http.server.html#http.server.SimpleHTTPRe
 > 
 > バージョン 3.4 で追加: --bind 引数が導入されました。
 
+# pip
+
+pip - The Python Package Installer — pip 20.0.2 documentation
+https://pip.pypa.io/en/stable/  
+
+pip — pip 20.0.2 documentation  
+https://pip.pypa.io/en/stable/reference/pip/
+
+pypa/pip: The Python package installer  
+https://github.com/pypa/pip
+
+PyPI · The Python Package Index  
+https://pypi.org/
+
+## `pip install -r requirements.txt -t ./packages`: requirements.txt からローカルにパッケージをインストールする
+
+```bash
+% cat requirements.txt 
+boto3
+% pip install -r requirements.txt -t ./packages
+```
 
 # `npm`: Node Package Manager
 
