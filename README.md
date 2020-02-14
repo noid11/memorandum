@@ -16,6 +16,7 @@
     - [`python -m http.server 8000`: http server をサクッと動かす](#python--m-httpserver-8000-http-server-をサクッと動かす)
 - [pip](#pip)
     - [`pip install -r requirements.txt -t ./packages`: requirements.txt からローカルにパッケージをインストールする](#pip-install--r-requirementstxt--t-packages-requirementstxt-からローカルにパッケージをインストールする)
+- [java](#java)
 - [`npm`: Node Package Manager](#npm-node-package-manager)
     - [`npm` cli](#npm-cli)
         - [`npm init`, `npm install package-name`: 初期セットアップ](#npm-init-npm-install-package-name-初期セットアップ)
@@ -521,6 +522,11 @@ https://pypi.org/
 boto3
 % pip install -r requirements.txt -t ./packages
 ```
+
+# java
+
+Java Documentation - Get Started  
+https://docs.oracle.com/en/java/index.html
 
 # `npm`: Node Package Manager
 
