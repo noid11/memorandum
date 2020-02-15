@@ -179,6 +179,10 @@
     - [`for`](#for)
     - [交互にコマンドを実行するスクリプト](#交互にコマンドを実行するスクリプト)
 - [英語](#英語)
+    - [significant: 重要な、意味深な、かなりの](#significant-重要な意味深なかなりの)
+    - [steep: 急な、激しい、大げさな、険しい、法外な、途方もなく高い](#steep-急な激しい大げさな険しい法外な途方もなく高い)
+    - [Dedicated: 専用の、特定の目的のための、献身的な](#dedicated-専用の特定の目的のための献身的な)
+    - [Differentiate: 区別する、識別する、差異を生じさせる](#differentiate-区別する識別する差異を生じさせる)
     - [苦情とかのクレーム: complaint](#苦情とかのクレーム-complaint)
     - [appearance: 外観](#appearance-外観)
     - [分かりにくくてスマヌ: `Sorry it's hard to understand.`, `Please excuse my lack of explanation.`](#分かりにくくてスマヌ-sorry-its-hard-to-understand-please-excuse-my-lack-of-explanation)
@@ -191,6 +195,7 @@
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [markdown の table ジェネレーター](#markdown-の-table-ジェネレーター)
     - [JSON を diff できるサイト](#json-を-diff-できるサイト)
     - [JSON を良い感じに見れる Viewer](#json-を良い感じに見れる-viewer)
     - [プログラミング言語やフレームワークやツールのリファレンスまとめサイト](#プログラミング言語やフレームワークやツールのリファレンスまとめサイト)
@@ -1987,7 +1992,11 @@ head の -c オプション(byte 指定)で大きさは調整すれば OK
 # pandoc を使って markdown を XWiki 記法に変換
 
 ```bash
+# output to file
 pandoc -f markdown -t xwiki -o converted.wiki original.md 
+
+# output clipboard (Mac)
+pandoc -f markdown original.md -t xwiki | pbcopy
 ```
 
 `-f`: from
@@ -2368,6 +2377,44 @@ chmod 755 ./alternately-commands-executor.sh
 
 # 英語
 
+## significant: 重要な、意味深な、かなりの
+
+significant とは 意味・読み方・表現 | Weblio英和辞書  
+https://ejje.weblio.jp/content/significant
+
+> a significant date 重要な日 《記念日など》.
+
+> a significant phrase 意義深い語句.
+
+## steep: 急な、激しい、大げさな、険しい、法外な、途方もなく高い
+
+steep とは 意味・読み方・表現 | Weblio英和辞書  
+https://ejje.weblio.jp/content/steep
+
+steep discounts 大幅な割引
+
+## Dedicated: 専用の、特定の目的のための、献身的な
+
+Dedicated とは 意味・読み方・表現 | Weblio英和辞書  
+https://ejje.weblio.jp/content/Dedicated
+
+> a dedicated line 専用回線
+
+> a dedicated server 専用サーバー
+
+> Dedicated to ... (本書を) ... に捧ぐ
+
+## Differentiate: 区別する、識別する、差異を生じさせる
+
+英語「Differentiate」の意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/Differentiate
+
+> differentiate these two plants これら二つの植物を識別する.
+
+> differentiate a rat from a mouse ネズミとハツカネズミを区別する.
+
+> How do you differentiate brands in your company? 御社ではどのようにブランド差別化を図っているのですか？
+
 ## 苦情とかのクレーム: complaint
 
 complaintの意味・使い方・読み方 | Weblio英和辞書  
@@ -2477,6 +2524,13 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 >     ただしOSによっては0.0.0.0を127.0.0.1にルーティングしていることがあるため表面上は問題ないように見える(CORSには引っかかるので混同していると痛い目見るかも)  
 
 # 便利な Web サイト
+
+## markdown の table ジェネレーター
+
+Markdown Tables generator - TablesGenerator.com  
+https://www.tablesgenerator.com/markdown_tables
+
+File の Paste table data からテーブルテキストをペーストして markdown table を生成してくれる
 
 ## JSON を diff できるサイト
 
