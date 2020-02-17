@@ -179,6 +179,12 @@
     - [`for`](#for)
     - [交互にコマンドを実行するスクリプト](#交互にコマンドを実行するスクリプト)
 - [英語](#英語)
+    - [evicted: 立ち退かせる、追い立てる](#evicted-立ち退かせる追い立てる)
+    - [dip: 浸す、すくい上げる、少し下げる](#dip-浸すすくい上げる少し下げる)
+    - [referred: 言及する、触れる、引き合いに出す](#referred-言及する触れる引き合いに出す)
+    - [callout: ... を大声で呼ぶ、 ... を呼び出す、出勤させる、喧嘩を挑む、発呼](#callout--を大声で呼ぶ--を呼び出す出勤させる喧嘩を挑む発呼)
+    - [夏時間: Daylight Savings Time, Suumer Time](#夏時間-daylight-savings-time-suumer-time)
+    - [glance: 一見、チラ見、きらめき](#glance-一見チラ見きらめき)
     - [significant: 重要な、意味深な、かなりの](#significant-重要な意味深なかなりの)
     - [steep: 急な、激しい、大げさな、険しい、法外な、途方もなく高い](#steep-急な激しい大げさな険しい法外な途方もなく高い)
     - [Dedicated: 専用の、特定の目的のための、献身的な](#dedicated-専用の特定の目的のための献身的な)
@@ -2376,6 +2382,64 @@ chmod 755 ./alternately-commands-executor.sh
 ```
 
 # 英語
+
+## evicted: 立ち退かせる、追い立てる
+
+evictedの意味・使い方 - 英和辞典 WEBLIO辞書  
+https://ejje.weblio.jp/content/evicted
+
+> He was evicted for non-payment of rent. 彼は家賃を払わないために家を立ち退かせられた
+
+> To provide a mechanism for determining which data is to be evicted in the first place from an intermediate cache such as an L2 cache. Ｌ２キャッシュなどの中間キャッシュからどのデータをまずエビクトすべきかを判定する機構を提供する。
+
+## dip: 浸す、すくい上げる、少し下げる
+
+英語「dip」の意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/dip
+
+> dip a towel (in) タオルをちょっと浸す.
+
+> dip hot water out of a pot なべから湯をくみ出す.
+
+> dip a curtsy 軽くひざを曲げて会釈する.
+
+## referred: 言及する、触れる、引き合いに出す
+
+referredの意味・使い方 - 英和辞典 WEBLIO辞書  
+https://ejje.weblio.jp/content/referred
+
+> a referred example 引用した例
+
+## callout: ... を大声で呼ぶ、 ... を呼び出す、出勤させる、喧嘩を挑む、発呼
+
+calloutの意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/callout
+
+> to call out to someone. (人に)話しかける
+
+## 夏時間: Daylight Savings Time, Suumer Time
+
+Daylight Savings Timeの意味・使い方 - 英和辞典 WEBLIO辞書  
+https://ejje.weblio.jp/content/Daylight+Savings+Time
+
+> 現地標準時間より時計を1時間進めた時間
+
+> I hear that the daylight savings time system is popular overseas. 海外ではサマータイム制度が盛んだと聞いている。
+
+> The clock was set ahead one hour for Daylight Savings Time. その時計は夏時間のために1時間進められた
+
+## glance: 一見、チラ見、きらめき
+
+glanceの意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/glance
+
+> give [shoot] a person a glance 人をちらりと見る.
+
+> I glanced at my wrist watch. ちょっと腕時計を見た.
+
+> The old man glanced at the boy. 老人は少年をちらっと見た
+
+> He glanced through the newspaper. 彼は新聞にざっと目を通した
 
 ## significant: 重要な、意味深な、かなりの
 
