@@ -76,6 +76,7 @@
     - [`jq fromjson`: エスケープされた json を整形する](#jq-fromjson-エスケープされた-json-を整形する)
     - [`jq length`: json 要素の数をカウントする](#jq-length-json-要素の数をカウントする)
 - [Git](#git)
+    - [`git clean -i -d`: git 管理してないファイルやディレクトリを削除](#git-clean--i--d-git-管理してないファイルやディレクトリを削除)
     - [`git checkout .`: ファイルの変更を commit せず取り消す](#git-checkout--ファイルの変更を-commit-せず取り消す)
     - [`.gitignore` あれこれ](#gitignore-あれこれ)
     - [`git rm filename`: Git で管理しているファイルを削除したい](#git-rm-filename-git-で管理しているファイルを削除したい)
@@ -1237,6 +1238,27 @@ $ echo $JSON | jq '.Users | length'
 
 Git - Reference  
 https://git-scm.com/docs
+
+## `git clean -i -d`: git 管理してないファイルやディレクトリを削除
+
+Git - git-clean Documentation  
+https://git-scm.com/docs/git-clean
+
+```bash
+$ git clean -i -d
+```
+
+`-d` は directory も削除対象に含めるオプション
+
+> -d  
+> Normally, when no <path> is specified, git clean will not recurse into untracked directories to avoid removing too much. Specify -d to have it recurse into such directories as well. If any paths are specified, -d is irrelevant; all untracked files matching the specified paths (with exceptions for nested git directories mentioned under --force) will be removed.
+
+`-i` は削除する際にインタラクティブモードによって確認を行うオプション
+
+> -i  
+> --interactive  
+> Show what would be done and clean files interactively. See “Interactive mode” for details.
+
 
 ## `git checkout .`: ファイルの変更を commit せず取り消す
 
