@@ -204,6 +204,7 @@
     - [OAuth の Implicit grant と Authorization code grant について](#oauth-の-implicit-grant-と-authorization-code-grant-について)
     - [`0.0.0.0` と `127.0.0.1` と `localhot`](#0000-と-127001-と-localhot)
 - [便利な Web サイト](#便利な-web-サイト)
+    - [CORS な API をテストできるサイト](#cors-な-api-をテストできるサイト)
     - [markdown の table ジェネレーター](#markdown-の-table-ジェネレーター)
     - [JSON を diff できるサイト](#json-を-diff-できるサイト)
     - [JSON を良い感じに見れる Viewer](#json-を良い感じに見れる-viewer)
@@ -2628,6 +2629,11 @@ https://qiita.com/amuyikam/items/0063df223aed40193ba9
 >     ただしOSによっては0.0.0.0を127.0.0.1にルーティングしていることがあるため表面上は問題ないように見える(CORSには引っかかるので混同していると痛い目見るかも)  
 
 # 便利な Web サイト
+
+## CORS な API をテストできるサイト
+
+Reqres - A hosted REST-API ready to respond to your AJAX requests  
+https://reqres.in/
 
 ## markdown の table ジェネレーター
 
