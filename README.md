@@ -174,6 +174,8 @@
     - [`tree -I nodemodule`: 特定ディレクトリを省いて tree 表示したい](#tree--i-nodemodule-特定ディレクトリを省いて-tree-表示したい)
 - [XML を jq 的に整形したい](#xml-を-jq-的に整形したい)
     - [参考](#参考)
+- [hugo](#hugo)
+    - [`hugo`: static page のビルド](#hugo-static-page-のビルド)
 - [環境変数一覧を表示したい](#環境変数一覧を表示したい)
 - [bash](#bash)
     - [`while`](#while)
@@ -2348,6 +2350,22 @@ https://linux.die.net/man/1/tidy
 
 Tidy Documentation
 http://www.html-tidy.org/documentation/
+
+# hugo
+
+The world’s fastest framework for building websites | Hugo  
+https://gohugo.io/
+
+## `hugo`: static page のビルド
+
+hugo | Hugo  
+https://gohugo.io/commands/hugo/
+
+```bash
+$ hugo
+```
+
+諸事情によってビルド結果を手動でデプロイしたい場合に使える
 
 # 環境変数一覧を表示したい
 
