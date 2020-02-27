@@ -237,6 +237,8 @@
         - [インターネットセキュリティ小辞典](#インターネットセキュリティ小辞典)
         - [セキュリティ関連 RFC](#セキュリティ関連-rfc)
     - [Linux のメモリ計算](#linux-のメモリ計算)
+- [便利なツール](#便利なツール)
+    - [iOS, Android といったモバイルデバイスの通信状況を確認したい](#ios-android-といったモバイルデバイスの通信状況を確認したい)
 - [仕様とかリファレンスとか](#仕様とかリファレンスとか)
     - [AWS Guides and API Reference](#aws-guides-and-api-reference)
     - [AWS CLI Reference](#aws-cli-reference)
@@ -2881,6 +2883,13 @@ https://www.ipa.go.jp/security/rfc/RFC.html
 
 【RHEL】linuxメモリのfreeとmeminfoの関係を図解し利用率の計算方法を説明してみる - のぴぴのメモ  
 http://nopipi.hatenablog.com/entry/2015/09/13/181026
+
+# 便利なツール
+
+## iOS, Android といったモバイルデバイスの通信状況を確認したい
+
+Charles Web Debugging Proxy • HTTP Monitor / HTTP Proxy / HTTPS & SSL Proxy / Reverse Proxy  
+https://www.charlesproxy.com/
 
 # 仕様とかリファレンスとか
 
