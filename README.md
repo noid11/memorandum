@@ -182,6 +182,8 @@
     - [`for`](#for)
     - [交互にコマンドを実行するスクリプト](#交互にコマンドを実行するスクリプト)
 - [英語](#英語)
+    - [footnote: 脚注、補足説明、注釈、下記](#footnote-脚注補足説明注釈下記)
+    - [Even if: たとえ](#even-if-たとえ)
     - [evicted: 立ち退かせる、追い立てる](#evicted-立ち退かせる追い立てる)
     - [dip: 浸す、すくい上げる、少し下げる](#dip-浸すすくい上げる少し下げる)
     - [referred: 言及する、触れる、引き合いに出す](#referred-言及する触れる引き合いに出す)
@@ -2423,6 +2425,28 @@ chmod 755 ./alternately-commands-executor.sh
 ```
 
 # 英語
+
+## footnote: 脚注、補足説明、注釈、下記
+
+footnoteの意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/footnote
+
+> in a footnote 脚注に
+
+> in footnote 3 脚注 3 で
+
+> a footnote by the author 作者自身つけた注釈
+
+> See the footnote on page 5. 5ページ下記を参照してください
+
+## Even if: たとえ
+
+Even ifの意味・使い方・読み方 | Weblio英和辞書  
+https://ejje.weblio.jp/content/Even+if
+
+> Even if I try taking ... を取ってみても
+
+> Even if that were the case そうであったとしても
 
 ## evicted: 立ち退かせる、追い立てる
 
