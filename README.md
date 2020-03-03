@@ -24,6 +24,8 @@
     - [`npx`: execute npm package binaries](#npx-execute-npm-package-binaries)
 - [Visual Studio Code](#visual-studio-code)
     - [Extensions](#extensions)
+        - [PlantUML: PlantUML を書いてプレビューできる](#plantuml-plantuml-を書いてプレビューできる)
+        - [Settings Sync: VS Code の設定を secret gist を使ってエクスポート、インポートできる](#settings-sync-vs-code-の設定を-secret-gist-を使ってエクスポートインポートできる)
         - [Whitespace+: スペースやタブに色付けしてくれる](#whitespace-スペースやタブに色付けしてくれる)
         - [zenkaku: 全角スペースをハイライトしてくれる](#zenkaku-全角スペースをハイライトしてくれる)
         - [Markdown TOC: 日本語使っててもいい感じに TOC を作ってくれる](#markdown-toc-日本語使っててもいい感じに-toc-を作ってくれる)
@@ -623,6 +625,34 @@ https://marketplace.visualstudio.com/
 
 Managing Extensions in Visual Studio Code  
 https://code.visualstudio.com/docs/editor/extension-gallery
+
+### PlantUML: PlantUML を書いてプレビューできる
+
+PlantUML - Visual Studio Marketplace  
+https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
+
+別途 PlantUML サーバーが必要になるが、公式の Docker Image があるので、これを使うと楽
+
+plantuml/plantuml-server: PlantUML Online Server  
+https://github.com/plantuml/plantuml-server
+
+```bash
+docker run -p 8080:8080 plantuml/plantuml-server:jetty
+```
+
+PlantUML の書き方
+
+PlantUML Cheat Sheet - Qiita  
+https://qiita.com/ogomr/items/0b5c4de7f38fd1482a48
+
+https://plantuml.com/ が公式サイトだが、証明書が切れてる？
+
+### Settings Sync: VS Code の設定を secret gist を使ってエクスポート、インポートできる
+
+Settings Sync - Visual Studio Marketplace  
+https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+
+PC を移行する時に便利
 
 ### Whitespace+: スペースやタブに色付けしてくれる
 
