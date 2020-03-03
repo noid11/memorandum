@@ -647,6 +647,14 @@ https://qiita.com/ogomr/items/0b5c4de7f38fd1482a48
 
 https://plantuml.com/ が公式サイトだが、証明書が切れてる？
 
+wiki に移行したようだ
+
+ja:start [PlantUML]  
+http://wiki.plantuml.net/ja/start
+
+ja:site:index [PlantUML]  
+http://wiki.plantuml.net/ja/site/index
+
 ### Settings Sync: VS Code の設定を secret gist を使ってエクスポート、インポートできる
 
 Settings Sync - Visual Studio Marketplace  
