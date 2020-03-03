@@ -655,6 +655,11 @@ http://wiki.plantuml.net/ja/start
 ja:site:index [PlantUML]  
 http://wiki.plantuml.net/ja/site/index
 
+PlantUML で AWS のアイコンを使えるコンポーネント
+
+milo-minderbinder/AWS-PlantUML: PlantUML sprites, macros, and other includes for AWS components.  
+https://github.com/milo-minderbinder/AWS-PlantUML
+
 ### Settings Sync: VS Code の設定を secret gist を使ってエクスポート、インポートできる
 
 Settings Sync - Visual Studio Marketplace  
