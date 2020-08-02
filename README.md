@@ -1472,12 +1472,19 @@ https://git-scm.com/docs/git-mv
 対象プロジェクトのディレクトリで設定する
 
 ```bash
-git config --local user.name itooww
+git config --local user.name noid
 git config --local user.email xxxxxxx+itooww@users.noreply.github.com
 git config --list --local
 ```
 
-`user.email` に設定するメアドは https://github.com/settings/emails を確認する。
+- `user.email` に設定するメアドは https://github.com/settings/emails を確認する。  
+- 以下個人環境用ワンライナー
+    - `~/.zshrc` とかに `GITHUB_EMAIL=xxx+noid11@users.noreply.github.com` という感じでシェル変数を定義しておく
+        - `export GITHUB_EMAIL=xxx+noid11@users.noreply.github.com` みたいに環境変数として定義しておいても良いが、どっちでも良い気がする
+
+```zsh
+git config --local user.name noid11; git config --local user.email $GITHUB_EMAIL; git config --list --local
+```
 
 # AWS CLI
 
