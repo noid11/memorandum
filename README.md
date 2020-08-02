@@ -1473,7 +1473,7 @@ https://git-scm.com/docs/git-mv
 
 ```bash
 git config --local user.name noid
-git config --local user.email xxxxxxx+itooww@users.noreply.github.com
+git config --local user.email xxxxxxx+noid11@users.noreply.github.com
 git config --list --local
 ```
 
