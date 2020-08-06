@@ -100,6 +100,8 @@
         - [コマンドを実行](#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C)
     - [Lambda](#lambda)
         - [invoke: Lambda 関数の起動](#invoke-lambda-%E9%96%A2%E6%95%B0%E3%81%AE%E8%B5%B7%E5%8B%95)
+    - [CloudTrail](#cloudtrail)
+        - [S3 に保存されたイベント情報をサクッと見たい](#s3-%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E6%83%85%E5%A0%B1%E3%82%92%E3%82%B5%E3%82%AF%E3%83%83%E3%81%A8%E8%A6%8B%E3%81%9F%E3%81%84)
     - [Comprehend](#comprehend)
         - [detect-dominant-language: 言語検出](#detect-dominant-language-%E8%A8%80%E8%AA%9E%E6%A4%9C%E5%87%BA)
         - [detect-entities: エンティティ検出](#detect-entities-%E3%82%A8%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3%E6%A4%9C%E5%87%BA)
@@ -1594,6 +1596,22 @@ aws lambda invoke --function-name $FUNCTION_NAME --payload '{ "name": "Bob" }' -
 
 # remove event outfile
 rm outfile
+```
+
+## CloudTrail
+
+### S3 に保存されたイベント情報をサクッと見たい
+
+```zsh
+# シェル変数セットアップ
+S3_BUCKET=mybucket
+CloudTrail_Event_ObjectName=xxx.json.gz
+CloudTrail_Event_Key=CloudTrail/AWSLogs/xxx/CloudTrail/region/yyyy/mm/dd/$CloudTrail_Event_ObjectName
+
+# コマンド群
+cd /tmp
+aws s3 cp s3://$S3_BUCKET/$CloudTrail_Event_Key ./
+gzcat $CloudTrail_Event_ObjectName | jq .
 ```
 
 ## Comprehend
